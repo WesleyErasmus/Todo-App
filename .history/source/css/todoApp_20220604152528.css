@@ -1,0 +1,9 @@
+/* CSS Variables */
+:root {
+    --background-color: #fff;
+    --primary: #1AB8DB;
+    --delete: #E50000;
+    --grey: #ccc9c9;
+
+    --shadows: 0 1px 3px rgba(0,0,0,0.12);
+}

@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <script src="https://kit.fontawesome.com/81ea498f91.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/source/css/todoApp.css">
     <script src="/source/script/todoApp.js" defer></script>
 </head>
@@ -14,64 +13,49 @@
     <main class="app-wrapper">
         <!-- App header -->
         <header>
-            <div>
-            <h1>Welcome to Clipboard</h1>
-            <h5><em>your favorite task list app!</em></h5>
-            </div>
-            <div id="jumbotron-logo"><i class="fa-solid fa-clipboard-check fa-3x"></i></div>
+            <h1>(Brand name) Todo App</h1>
+            <div id="jumbotron-logo">LOGO</div>
         </header>
-
-        <div id="sub-header">
-        <form id="search-bar">
+        <form>
         <input type="text"
         id="search-bar"
-        placeholder="Search for a task...">
-        <button type="submit"><i class="fa fa-search"
-        id="search-submit-btn"></i></button>
+        placeholder="Search..">
+        <button type="submit">Submit</button>
         </form>
+            <h2>CREATE A TASK</h2>
 
-        <h2 id="create-task-heading">CREATE A TASK</h2>
-        
-        </div>
 
         <!-- Categories section -->
         <section>
         <form id="todo-list-form">
             <h3 class="category-heading">Select a category</h3>
-            <div class="category-selectors">
+            <div class="radio-categories">
                 <!-- Personal category (make to assign as default, unless user selects work category) -->
-                <label id="personal-label-btn">
+                <label>
                     <input type="radio" name="category" value="Personal" id="personal-category" />
                     <div>Personal</div>
                 </label>
                 <!-- Work category -->
-                <label id="work-label-btn">
+                <label>
                     <input type="radio" name="category" value="Work" id="work-category" />
                     <div>Work</div>
                 </label>
             </div> <!-- End of radio categories div -->    
-            <div class="create-submit">
-            <input type="text" name="task-input" id="create-task" placeholder="Create a new task">
-            <button id="task-submit-btn" type="submit" value="create-new-task">
-                <i class="fa-solid fa-circle-plus fa-4x"></i>
+            <input type="text" name="task-input" id="task-input" placeholder="Create a new task">
+            <button type="submit" value="create-new-task">
+                Add FA plus icon here
             </button>
-        </div> 
         </form>
         </section>
 
         <!-- Task list is created here, new tasks are outputted below -->
         <section class="todo-list-output">
-            <div id="list-header">
-            <h3>Your list</h3>
-            <div><strong>Filter</strong></div>
-            </div>
+           
+            <h4>Your list</h4>
+            <div>Add sort / filter here (date & alphabetically?)</div>
             <!-- Actual task list output -->
             <div class="tasks" id="tasks">
                 <li>Tasks will be outputted below:</li>
-                <li><i class="fa-solid fa-pencil"></i></li>
-                <li><i class="fa fa-trash" aria-hidden="true"></i></li>
-                <li><i class="fa-solid fa-check"></i></li>
-                <li><i class="fa-solid fa-floppy-disk"></i></li>
             </div>
 
         </section>

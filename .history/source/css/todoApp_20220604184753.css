@@ -43,7 +43,7 @@ input[type="text"] {
     padding-right: 0rem;
 	color: var(--dark-grey);
 	background-color: var(--background-color);
-    border: 0.1px solid var(--primary);
+    border: 0.1px solid var(--grey);
     border-radius: 9999px;
 }
 
@@ -90,7 +90,6 @@ input[type="text"] {
 }
 
 main {
-    background-color: var(--dark-grey);
     padding-left: 2rem;
     padding-right: 2rem;
     flex: 1 1 0%;
@@ -99,7 +98,7 @@ main {
     max-width: 800px;
     width: 100%;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
@@ -142,7 +141,7 @@ section {
     justify-content: center;
     align-items: center;
     background-color: var(--primary);
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     border-radius: 999999px;
     color: #fff;
     /* margin-bottom: 1rem; */
@@ -163,11 +162,4 @@ background-color: var(--grey);
 
 .create-task {
     text-align: center;
-}
-
-#list-header {
-width: 80%;
-display: flex;
-justify-content: space-between;
-margin-bottom: 1rem;
 }

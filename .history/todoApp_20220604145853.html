@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<body>
+    <!-- App wrapper -->
+    <main class="app-wrapper">
+        <!-- App header -->
+        <header>
+            <h1>(Brand name) Todo App</h1>
+            <div id="jumbotron-logo">LOGO</div>
+            <div id="search-bar">Search Bar</div>
+            <h2>CREATE A TASK</h2>
+        </header>
+
+        <!-- Categories section -->
+        <section>
+        <form id="todo-list-form">
+            <h3 class="category-heading">Select a category</h3>
+            <div class="radio-categories">
+                <!-- Personal category (make to assign as default, unless user selects work category) -->
+                <label>
+                    <input type="radio" name="category" value="Personal" id="personal-category" />
+                    <div>Personal</div>
+                </label>
+                <!-- Work category -->
+                <label>
+                    <input type="radio" name="category" value="Work" id="work-category" />
+                    <div>Work</div>
+                </label>
+            </div> <!-- End of radio categories div -->    
+            <input type="text" name="task-input" id="task-input" placeholder="Create a new task">
+            <button type="submit" value="create-new-task">
+                Add FA plus icon here
+            </button>
+        </form>
+        </section>
+
+        <!-- Task list is created here, new tasks are outputted below -->
+        <section class="todo-list-output">
+           
+            <h4>Your list</h4>
+            <div>Add sort / filter here (date & alphabetically?)</div>
+            <div class="todo-item" id="todo-item">
+                <li>Tasks will be outputted below:</li>
+            </div>
+
+        </section>
+
+    </main> <!-- End of App wrapper -->
+    
+    
+</body>
+</html>

@@ -43,25 +43,11 @@ input[type="text"] {
     padding-right: 0rem;
 	color: var(--dark-grey);
 	background-color: var(--background-color);
-    border: 0.1px solid var(--primary);
+    border: 0.1px solid var(--grey);
     border-radius: 9999px;
 }
 
-#sub-header {
-    margin-top: 1rem;
-    text-align: center;
-    align-items: center;
-}
-
-#search-bar {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    /* text-align: center; */
-}
-
-#task-submit-btn{
+#task-submit-btn, #search-submit-btn {
     position: absolute;
     display: block;
     right: 0rem;
@@ -71,26 +57,27 @@ input[type="text"] {
     color: var(--primary);
 }
 
-.fa-search {
-    font-size: 1.4rem;
-    color: var(--primary);
-}
-
-#search-submit-btn {
+/* #search-submit-btn {
     position: absolute;
     display: block;
     right: 0rem;
-    top: 0;
-    background-color: var(--primary);
-    border-radius: 50%;
-    padding: 1rem;
-    color: #fff;
-    /* border: none; */
-    /* color: var(--primary); */
-}
+    bottom: -0.5px;
+    border: none;
+    background-color: transparent;
+    color: var(--primary);
+} */
+
+/* #task-submit-btn {
+    position: absolute;
+    display: block;
+    right: 0rem;
+    bottom: -0.5px;
+    border: none;
+    background-color: transparent;
+    color: var(--primary);
+} */
 
 main {
-    background-color: var(--dark-grey);
     padding-left: 2rem;
     padding-right: 2rem;
     flex: 1 1 0%;
@@ -99,7 +86,7 @@ main {
     max-width: 800px;
     width: 100%;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
@@ -117,6 +104,20 @@ header {
 section {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+#sub-header {
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+#search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
 }
 
 #create-task-heading {
@@ -142,7 +143,7 @@ section {
     justify-content: center;
     align-items: center;
     background-color: var(--primary);
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     border-radius: 999999px;
     color: #fff;
     /* margin-bottom: 1rem; */
@@ -163,11 +164,4 @@ background-color: var(--grey);
 
 .create-task {
     text-align: center;
-}
-
-#list-header {
-width: 80%;
-display: flex;
-justify-content: space-between;
-margin-bottom: 1rem;
 }

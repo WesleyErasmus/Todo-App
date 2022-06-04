@@ -25,9 +25,8 @@
         <form id="search-bar">
         <input type="text"
         id="search-bar"
-        placeholder="Search for a task...">
-        <button type="submit"><i class="fa fa-search"
-        id="search-submit-btn"></i></button>
+        placeholder="Search..">
+        <button type="submit"><i class="fa fa-search"></i> <i class="fa-brands fa-sistrix"></i></button>
         </form>
 
         <h2 id="create-task-heading">CREATE A TASK</h2>
@@ -52,8 +51,8 @@
             </div> <!-- End of radio categories div -->    
             <div class="create-submit">
             <input type="text" name="task-input" id="create-task" placeholder="Create a new task">
-            <button id="task-submit-btn" type="submit" value="create-new-task">
-                <i class="fa-solid fa-circle-plus fa-4x"></i>
+            <button id="task-submit" type="submit" value="create-new-task">
+                <i class="fa-solid fa-circle-plus fa-3x"></i>
             </button>
         </div> 
         </form>
@@ -61,10 +60,9 @@
 
         <!-- Task list is created here, new tasks are outputted below -->
         <section class="todo-list-output">
-            <div id="list-header">
-            <h3>Your list</h3>
-            <div><strong>Filter</strong></div>
-            </div>
+           
+            <h4>Your list</h4>
+            <div>Add sort / filter here (date & alphabetically?)</div>
             <!-- Actual task list output -->
             <div class="tasks" id="tasks">
                 <li>Tasks will be outputted below:</li>

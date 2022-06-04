@@ -90,7 +90,6 @@ input[type="text"] {
 }
 
 main {
-    background-color: var(--dark-grey);
     padding-left: 2rem;
     padding-right: 2rem;
     flex: 1 1 0%;
@@ -166,8 +165,5 @@ background-color: var(--grey);
 }
 
 #list-header {
-width: 80%;
 display: flex;
-justify-content: space-between;
-margin-bottom: 1rem;
 }
