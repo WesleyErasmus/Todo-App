@@ -21,7 +21,7 @@
             <div id="jumbotron-logo"><i class="fa-solid fa-clipboard-check fa-3x"></i></div>
         </header>
 
-        <!-- <div id="sub-header">
+        <div id="sub-header">
         <form id="search-bar">
         <input type="text"
         id="search-bar"
@@ -29,9 +29,10 @@
         <button type="submit"><i class="fa fa-search"
         id="search-submit-btn"></i></button>
         </form>
-        </div> -->
 
         <h2 id="create-task-heading">CREATE A TASK</h2>
+        
+        </div>
 
         <!-- Categories section -->
         <section>
@@ -52,7 +53,7 @@
             <div class="create-submit">
             <input type="text" name="create-task" id="create-task" placeholder="Create a new task" />
             <button id="task-submit-btn" type="submit" value="create-new-task">
-                <i class="fa-solid fa-circle-plus"></i>
+                <i class="fa-solid fa-circle-plus fa-4x"></i>
             </button>
         </div> 
         </form>
@@ -64,15 +65,6 @@
             <h3>Your list</h3>
             <div><strong>Filter</strong></div>
             </div>
-            <div id="sub-header">
-                <form id="search-bar">
-                <input type="text"
-                id="search-bar"
-                placeholder="Search for a task...">
-                <button type="submit"><i class="fa fa-search"
-                id="search-submit-btn"></i></button>
-                </form>
-                </div>
             <!-- Actual task list output -->
             <div class="tasks" id="tasks">
 
@@ -84,36 +76,8 @@
                         value="dummy task"
                         readonly>
                         <div class="edit-delete">
-                            <button class="edit"><i class="fa-solid fa-pencil"></i></button>
-                            <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dummy-task">
-
-                    <div class="task-name">
-                        <input type="text"
-                        class="text"
-                        value="dummy task"
-                        readonly>
-                        <div class="edit-delete">
-                            <button class="edit"><i class="fa-solid fa-pencil"></i></button>
-                            <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dummy-task">
-
-                    <div class="task-name">
-                        <input type="text"
-                        class="text"
-                        value="dummy task"
-                        readonly>
-                        <div class="edit-delete">
-                            <button class="edit"><i class="fa-solid fa-pencil"></i></button>
-                            <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -123,7 +87,11 @@
         </section>
 
     </main> <!-- End of App wrapper -->
-        <!-- Save icon and task complete icon -->
+    
+
+    <li>Tasks will be outputted below:</li>
+                <li><i class="fa-solid fa-pencil"></i></li>
+                <li><i class="fa fa-trash" aria-hidden="true"></i></li>
                 <li><i class="fa-solid fa-check"></i></li>
                 <li><i class="fa-solid fa-floppy-disk"></i></li>
     

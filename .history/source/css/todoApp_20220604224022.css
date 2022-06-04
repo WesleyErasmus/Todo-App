@@ -87,9 +87,8 @@ header {
     padding-right: 0rem;
 	color: var(--dark-grey);
 	background-color: var(--background-color);
-    border: 0.1px solid var(--grey);
+    border: 0.1px solid var(--primary);
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 #search-submit-btn {

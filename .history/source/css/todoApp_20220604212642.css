@@ -22,13 +22,13 @@
 }
 
 /* Below will remove input and checkbox default styling */
-input:not([type="radio"]):not([type="checkbox"]), button {
+/* input:not([type="radio"]):not([type="checkbox"]), button {
 	appearance: none;
 	border: none;
 	outline: none;
 	background: none;
 	cursor: initial;
-}
+} */
 
 button {
 	appearance: none;
@@ -61,7 +61,7 @@ main {
 }
 
 section {
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -82,14 +82,13 @@ header {
 #search-bar input{
 	display: block;
 	width: 100%;
-	font-size: 0.9rem;
-	padding: 0.50rem 1.5rem;
+	font-size: 1.05rem;
+	padding: 0.70rem 1.5rem;
     padding-right: 0rem;
 	color: var(--dark-grey);
 	background-color: var(--background-color);
-    border: 0.1px solid var(--grey);
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    border: 0.1px solid var(--primary);
+    border-radius: 9999px;
 }
 
 #search-submit-btn {
@@ -98,12 +97,8 @@ header {
     right: 0rem;
     top: 0;
     background-color: var(--primary);
-    /* border-radius: 50%; */
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    padding: 0.56rem;
+    border-radius: 50%;
+    padding: 0.75rem;
     color: #fff;
     /* border: none; */
     /* color: var(--primary); */
@@ -111,7 +106,7 @@ header {
 
 /* Font-awesome search icon styling */
 .fa-search {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--primary);
 }
 
@@ -124,8 +119,8 @@ header {
 #create-task {
 	display: block;
 	width: 100%;
-	font-size: 1rem;
-	padding: 0.79rem 1.5rem;
+	font-size: 1.05rem;
+	padding: 0.99rem 1.5rem;
     padding-right: 0rem;
 	color: var(--dark-grey);
 	background-color: var(--background-color);
@@ -133,7 +128,6 @@ header {
     border-radius: 9999px;
 }
 
-/* change to task add btn */
 #task-submit-btn{
     position: absolute;
     display: block;
@@ -144,16 +138,11 @@ header {
     color: var(--primary);
 }
 
-.fa-circle-plus {
-    font-size: 2.75rem;
-}
-
 /* add gradient color to fa-logo */
 
 #create-task-heading {
     color: var(--grey);
     margin-top: 1rem;
-    text-align: center;
 }
 
 .category-heading {
@@ -177,9 +166,9 @@ header {
     padding: 1rem 2rem;
     border-radius: 999999px;
     color: #fff;
+    /* margin-bottom: 1rem; */
 }
 
-/* change the below id to #work-category-btn */
 #work-label-btn {
 background-color: var(--grey);
 }
@@ -204,21 +193,13 @@ justify-content: space-between;
 margin-bottom: 1rem;
 }
 
-#tasks {
-    border-radius: 0.5rem;
-    background-color: #fff;
-}
-
-#tasks .task-name {
+.dummy-task {
     display: flex;
     justify-content: space-between;
-    background-color: var(--background-color);
-    padding: 1.75rem;
-    /* border-radius: 0.5rem; */
-    background-color: #fff;
-    margin-bottom: 0rem;
-    margin: 0 1rem;
-    border-bottom: 0.01px solid rgba(229, 225, 225, 0.919);
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 .dummy-task .task-name {
@@ -226,7 +207,7 @@ margin-bottom: 1rem;
 }
 
 .dummy-task .task-name .text {
-    /* color: #1593AF; */
+    color: #1593AF;
     width: 100%;
     display: block;
     transition: 0.4s;
@@ -238,20 +219,10 @@ margin-bottom: 1rem;
 
 }
 
-/* Edit button styling */
-
-.fa-pencil {
-    color: var(--secondary);
-}
-
-.fa-trash {
-    color: var(--delete);
-}
-
 .dummy-task .edit-delete button {
     cursor: pointer;
     margin: 0 0.5rem;
-    font-size: 0.8rem;
+    font-size: 1.125rem;
     font-weight: 700;
     text-transform: uppercase;
     transition: 0.4s;
