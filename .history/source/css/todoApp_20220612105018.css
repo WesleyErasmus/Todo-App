@@ -211,9 +211,9 @@ margin-bottom: 1rem;
 }
 
 /* Filter styling */
-.filter {
+/* .filter {
     color: var(--grey);
-}
+} */
 
 .fa-arrow-down-wide-short {
     color: var(--primary);

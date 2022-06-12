@@ -212,7 +212,7 @@ margin-bottom: 1rem;
 
 /* Filter styling */
 .filter {
-    color: var(--grey);
+    color: var(--dark-grey);
 }
 
 .fa-arrow-down-wide-short {

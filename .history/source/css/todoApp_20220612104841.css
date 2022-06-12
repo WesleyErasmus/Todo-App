@@ -210,13 +210,13 @@ margin-bottom: 1rem;
     color: var(--primary);
 }
 
-/* Filter styling */
-.filter {
+Filter styling */
+/* .filter {
     color: var(--grey);
 }
 
 .fa-arrow-down-wide-short {
-    color: var(--primary);
+    color: var(--dark-grey);
 }
 
 select {

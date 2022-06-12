@@ -75,19 +75,18 @@ header {
     border-radius: 1rem;
     /* add gradient color to font and logo */
 }
-/* create task H3 styling*/
+
 #create-task-heading {
     color: var(--grey);
     margin-top: 1rem;
     text-align: center;
 }
-/* Select category h2 styling */
+
 .category-heading {
     text-align: center;
     margin-bottom: 0.75rem;
 }
 
-/* Work / personal category selector styling */
 .category-selectors {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -140,6 +139,8 @@ background-color: var(--grey);
 
 /* add gradient color to fa-logo */
 
+
+
 .create-submit {
     position: relative;
     display: flex;
@@ -162,8 +163,8 @@ margin-bottom: 1rem;
 
 #search-filter-section {
     display: flex;
-    margin: 0 auto;
     justify-content: space-between;
+    width: 95%;
     margin-top: 1rem;
     text-align: center;
     align-items: center;
@@ -196,34 +197,21 @@ margin-bottom: 1rem;
     right: 0rem;
     top: 0;
     background-color: var(--primary);
+    /* border-radius: 50%; */
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     padding: 0.56rem;
     color: #fff;
+    /* border: none; */
+    /* color: var(--primary); */
 }
 
 /* Font-awesome search icon styling */
 .fa-search {
     font-size: 1rem;
     color: var(--primary);
-}
-
-/* Filter styling */
-.filter {
-    color: var(--grey);
-}
-
-.fa-arrow-down-wide-short {
-    color: var(--primary);
-}
-
-select {
-    margin-left: 0.3rem;
-    padding: 0.3rem;
-    border: 1px var(--grey) solid;
-    border-radius: 0.5rem;
 }
 
 #tasks {
@@ -236,6 +224,7 @@ select {
     justify-content: space-between;
     background-color: var(--background-color);
     padding: 1.75rem;
+    /* border-radius: 0.5rem; */
     background-color: #fff;
     margin-bottom: 0rem;
     margin: 0 1rem;

@@ -21,6 +21,16 @@
             <div id="jumbotron-logo"><i class="fa-solid fa-clipboard-check fa-3x"></i></div>
         </header>
 
+        <!-- <div id="sub-header">
+        <form id="search-bar">
+        <input type="text"
+        id="search-bar"
+        placeholder="Search for a task...">
+        <button type="submit"><i class="fa fa-search"
+        id="search-submit-btn"></i></button>
+        </form>
+        </div> -->
+
         <h2 id="create-task-heading">CREATE A TASK</h2>
 
         <!-- Categories section -->
@@ -52,9 +62,10 @@
         <section class="todo-list-output">
             <div id="list-header">
             <h3>Your list</h3>
+            <div><strong>Filter</strong></div>
             </div>
             <!-- SEARCH BAR -->
-            <div id="search-filter-section">
+            <div id="sub-header">
                 <form id="search-bar">
                 <input type="text"
                 id="search-bar"
@@ -62,14 +73,6 @@
                 <button type="submit"><i class="fa fa-search"
                 id="search-submit-btn"></i></button>
                 </form>
-                <!-- Classic filter dropdown -->
-                <div class="filter"><strong>Filter <i class="fa-solid fa-arrow-down-wide-short"></i></strong>    
-                    <select name="Filter-by" id="filter-by">
-                    <option value="Date">Date</option>
-                    <option value="Name">Name</option>
-                    </select>
-                </div>
-                
                 </div>
             <!-- Actual task list output -->
             <div class="tasks" id="tasks">

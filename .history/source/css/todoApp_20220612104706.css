@@ -215,10 +215,6 @@ margin-bottom: 1rem;
     color: var(--grey);
 }
 
-.fa-arrow-down-wide-short {
-    color: var(--primary);
-}
-
 select {
     margin-left: 0.3rem;
     padding: 0.3rem;

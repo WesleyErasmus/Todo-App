@@ -75,95 +75,11 @@ header {
     border-radius: 1rem;
     /* add gradient color to font and logo */
 }
-/* create task H3 styling*/
-#create-task-heading {
-    color: var(--grey);
-    margin-top: 1rem;
-    text-align: center;
-}
-/* Select category h2 styling */
-.category-heading {
-    text-align: center;
-    margin-bottom: 0.75rem;
-}
-
-/* Work / personal category selector styling */
-.category-selectors {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.category-selectors label{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary);
-    padding: 1rem 2rem;
-    border-radius: 999999px;
-    color: #fff;
-}
-
-/* change the below id to #work-category-btn */
-#work-label-btn {
-background-color: var(--grey);
-}
-
-#create-task {
-	display: block;
-	width: 100%;
-	font-size: 1rem;
-	padding: 0.79rem 1.5rem;
-    padding-right: 0rem;
-	color: var(--dark-grey);
-	background-color: var(--background-color);
-    border: 0.1px solid var(--primary);
-    border-radius: 9999px;
-}
-
-/* change to task add btn */
-#task-submit-btn{
-    position: absolute;
-    display: block;
-    right: 0rem;
-    bottom: -0.5px;
-    border: none;
-    background-color: transparent;
-    color: var(--primary);
-}
-
-.fa-circle-plus {
-    font-size: 2.75rem;
-}
-
-/* add gradient color to fa-logo */
-
-.create-submit {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 0.5rem;
-}
-
-.create-task {
-    text-align: center;
-}
-
-#list-header {
-width: 80%;
-display: flex;
-justify-content: space-between;
-margin-bottom: 1rem;
-}
 
 #search-filter-section {
     display: flex;
-    margin: 0 auto;
     justify-content: space-between;
+    width: 95%;
     margin-top: 1rem;
     text-align: center;
     align-items: center;
@@ -196,12 +112,15 @@ margin-bottom: 1rem;
     right: 0rem;
     top: 0;
     background-color: var(--primary);
+    /* border-radius: 50%; */
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     padding: 0.56rem;
     color: #fff;
+    /* border: none; */
+    /* color: var(--primary); */
 }
 
 /* Font-awesome search icon styling */
@@ -210,20 +129,87 @@ margin-bottom: 1rem;
     color: var(--primary);
 }
 
-/* Filter styling */
-.filter {
-    color: var(--grey);
+#create-task {
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	padding: 0.79rem 1.5rem;
+    padding-right: 0rem;
+	color: var(--dark-grey);
+	background-color: var(--background-color);
+    border: 0.1px solid var(--primary);
+    border-radius: 9999px;
 }
 
-.fa-arrow-down-wide-short {
+/* change to task add btn */
+#task-submit-btn{
+    position: absolute;
+    display: block;
+    right: 0rem;
+    bottom: -0.5px;
+    border: none;
+    background-color: transparent;
     color: var(--primary);
 }
 
-select {
-    margin-left: 0.3rem;
-    padding: 0.3rem;
-    border: 1px var(--grey) solid;
-    border-radius: 0.5rem;
+.fa-circle-plus {
+    font-size: 2.75rem;
+}
+
+/* add gradient color to fa-logo */
+
+#create-task-heading {
+    color: var(--grey);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.category-heading {
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.category-selectors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.category-selectors label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    border-radius: 999999px;
+    color: #fff;
+}
+
+/* change the below id to #work-category-btn */
+#work-label-btn {
+background-color: var(--grey);
+}
+
+.create-submit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.create-task {
+    text-align: center;
+}
+
+#list-header {
+width: 80%;
+display: flex;
+justify-content: space-between;
+margin-bottom: 1rem;
 }
 
 #tasks {
@@ -236,6 +222,7 @@ select {
     justify-content: space-between;
     background-color: var(--background-color);
     padding: 1.75rem;
+    /* border-radius: 0.5rem; */
     background-color: #fff;
     margin-bottom: 0rem;
     margin: 0 1rem;

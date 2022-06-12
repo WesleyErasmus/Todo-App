@@ -174,7 +174,7 @@ margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45%;
+    width: 47%;
 }
 
 #search-bar input{
@@ -207,15 +207,6 @@ margin-bottom: 1rem;
 /* Font-awesome search icon styling */
 .fa-search {
     font-size: 1rem;
-    color: var(--primary);
-}
-
-/* Filter styling */
-.filter {
-    color: var(--grey);
-}
-
-.fa-arrow-down-wide-short {
     color: var(--primary);
 }
 
