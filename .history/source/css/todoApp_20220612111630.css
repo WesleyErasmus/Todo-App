@@ -1,0 +1,289 @@
+/* CSS Variables */
+:root {
+    --background-color: #fff;
+    --primary: #1AB8DB;
+    --secondary: #1593AF;
+    --delete: #E50000;
+    --grey: #ccc9c9;
+    --dark-grey: #444444;
+
+    --shadows: 0 1px 3px rgba(0,0,0,0.12);
+
+    /* add linear gradients */
+}
+
+/* Universal selector styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+}
+
+/* Below will remove input and checkbox default styling */
+input:not([type="radio"]):not([type="checkbox"]), button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+
+button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary);
+}
+
+main {
+    padding-top: 2rem;
+    background-color: var(--background-color);
+    border: #1593AF solid 1px;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex: 1 1 0%;
+    align-items: center;
+    justify-content: center;
+    max-width: 570px;
+    height: 85vh;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+section {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* add gradient color to font and logo */
+}
+.slogan {
+    background: rgb(67,198,172);
+    background: linear-gradient(90deg, rgba(67,198,172,1) 0%, rgba(25,22,84,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#jumbotron-logo {
+
+}
+/* create task H3 styling*/
+#create-task-heading {
+    color: var(--grey);
+    margin-top: 1rem;
+    text-align: center;
+}
+/* Select category h2 styling */
+.category-heading {
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* Work / personal category selector styling */
+.category-selectors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.category-selectors label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    border-radius: 999999px;
+    color: #fff;
+}
+
+/* change the below id to #work-category-btn */
+#work-label-btn {
+background-color: var(--grey);
+}
+
+#create-task {
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	padding: 0.79rem 1.5rem;
+    padding-right: 0rem;
+	color: var(--dark-grey);
+	background-color: var(--background-color);
+    border: 0.1px solid var(--primary);
+    border-radius: 9999px;
+}
+
+/* change to task add btn */
+#task-submit-btn{
+    position: absolute;
+    display: block;
+    right: 0rem;
+    bottom: -0.5px;
+    border: none;
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.fa-circle-plus {
+    font-size: 2.75rem;
+}
+
+/* add gradient color to fa-logo */
+
+.create-submit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.create-task {
+    text-align: center;
+}
+
+#list-header {
+width: 80%;
+display: flex;
+justify-content: space-between;
+margin-bottom: 1rem;
+}
+
+#search-filter-section {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+#search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+#search-bar input{
+	display: block;
+	width: 100%;
+	font-size: 0.9rem;
+	padding: 0.50rem 1.5rem;
+    padding-right: 0rem;
+	color: var(--dark-grey);
+	background-color: var(--background-color);
+    border: 0.1px solid var(--grey);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#search-submit-btn {
+    position: absolute;
+    display: block;
+    right: 0rem;
+    top: 0;
+    background-color: var(--primary);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 0.56rem;
+    color: #fff;
+}
+
+/* Font-awesome search icon styling */
+.fa-search {
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+/* Filter styling */
+.filter {
+    color: var(--grey);
+}
+
+.fa-arrow-down-wide-short {
+    color: var(--primary);
+}
+
+select {
+    margin-left: 0.3rem;
+    padding: 0.3rem;
+    border: 1px var(--grey) solid;
+    border-radius: 0.5rem;
+}
+
+#tasks {
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+#tasks .task-name {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: 1.75rem;
+    background-color: #fff;
+    margin-bottom: 0rem;
+    margin: 0 1rem;
+    border-bottom: 0.01px solid rgba(229, 225, 225, 0.919);
+}
+
+.dummy-task .task-name {
+    flex: 1 1 0%;
+}
+
+.dummy-task .task-name .text {
+    /* color: #1593AF; */
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.dummy-task .edit-delete {
+    display: flex;
+    margin: 0 -0.5rem;
+
+}
+
+/* Edit button styling */
+
+.fa-pencil {
+    color: var(--secondary);
+}
+
+.fa-trash {
+    color: var(--delete);
+}
+
+.dummy-task .edit-delete button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}

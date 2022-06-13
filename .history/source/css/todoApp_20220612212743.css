@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100&family=Questrial&display=swap');
+
+
+/* CSS Variables */
+:root {
+    --background-color: #fff;
+    --primary: #1AB8DB;
+    --secondary: #1593AF;
+    --delete: #E50000;
+    --grey: #ccc9c9;
+    --dark-grey: #444444;
+    
+    --text-shadows: text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    /* add linear gradients */
+}
+
+/* Universal selector styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Tera', sans-serif;
+    list-style: none;
+}
+
+/* Below will remove input and checkbox default styling */
+input:not([type="radio"]):not([type="checkbox"]), button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+
+/* *** UNIVERSAL BUTTON STYLING *** */
+button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--grey);
+    color: var(--primary);
+}
+
+main {
+    background-color: rgba(9, 9, 57, 0.52);
+    padding-top: 2rem;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex: 1 1 0%;
+    align-items: center;
+    justify-content: center;
+    max-width: 480px;
+    height: 95vh;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+section {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* background-color: #004883; */
+    /* background-image: url(/images/bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    /* add gradient color to font and logo */
+}
+.slogan {
+    color: #fff;
+    font-family: 'Lexend Tera', sans-serif;
+    font-size: 2.9rem;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+.slogan-2 {
+    color: #444444;
+}
+
+#jumbotron-logo {
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* create task H3 styling*/
+#create-task-heading {
+    color: var(--background-color);
+    margin-top: 1rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* Select category h2 styling */
+.category-heading {
+    color: var(--background-color);
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* Work / personal category selector styling */
+.category-selectors {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+label {
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    /* LABEL FONT SIZE */
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.category-selectors label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    /* background-color: #FEDF82; */
+    background-color: transparent;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+#work-label-btn, #personal-label-btn {
+    width: 115px;
+    height: 115px;
+    margin: 15px 3px 15px 3px;
+}
+
+/* change the below id to #work-category-btn */
+#work-label-btn {
+    margin-left: 15px;
+    font-family: 'Karla', sans-serif;
+    /* background-color: #7FDFED; */
+    background-color: transparent;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.work-img {
+    width: 50px;
+    height: 50px;
+
+}
+
+#create-task {
+    font-family: 'Questrial', sans-serif;
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	padding: 0.79rem 1.5rem;
+    padding-right: 0rem;
+	color: var(--dark-grey);
+	background-color: var(--background-color);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    border-radius: 9999px;
+    
+}
+
+/* change to task add btn */
+#task-submit-btn{
+    position: absolute;
+    display: block;
+    right: 0rem;
+    bottom: -0.5px;
+    border: none;
+    background-color: transparent;
+    color: #00ACC4;
+}
+
+.fa-circle-plus {
+    font-size: 2.7rem;
+}
+
+/* add gradient color to fa-logo */
+
+.create-submit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.create-task {
+    text-align: center;
+}
+
+#list-header {
+width: 80%;
+display: flex;
+justify-content: space-between;
+margin-bottom: 1rem;
+color: #fff;
+}
+
+#search-filter-section {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+#search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47%;
+}
+
+#search-bar input{
+    font-family: 'Questrial', sans-serif;
+	display: block;
+	width: 100%;
+	font-size: 0.9rem;
+	padding: 0.50rem 1.5rem;
+    padding-right: 0rem;
+	color: var(--dark-grey);
+	background-color: var(--background-color);
+    border: 0.1px solid var(--grey);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+#search-submit-btn {
+    position: absolute;
+    display: block;
+    right: 0rem;
+    top: 0;
+    background-color: var(--grey);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 0.53rem;
+    color: #fff;
+}
+
+/* Font-awesome search icon styling */
+.fa-search {
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+/* Filter styling */
+.filter {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.fa-arrow-down-wide-short {
+    color: var(--primary);
+}
+
+select {
+    margin-left: 0.3rem;
+    padding: 0.3rem;
+    border: none;
+    outline: 0;
+    /* border: 1px var(--grey) solid; */
+    border-radius: 0.5rem;
+    font-family: 'Questrial', sans-serif;
+    cursor: pointer;
+}
+option {
+    font-family: 'Questrial', sans-serif;
+}
+
+#tasks {
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+#tasks .task-name {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: 1.75rem;
+    background-color: #fff;
+    margin-bottom: 0rem;
+    margin: 0 1rem;
+    border-bottom: 0.01px solid rgba(229, 225, 225, 0.919);
+}
+
+.dummy-task .task-name {
+    flex: 1 1 0%;
+}
+
+.dummy-task .task-name .text {
+    color: var(--dark-grey);
+    font-family: 'Questrial', sans-serif;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.dummy-task .edit-delete {
+    display: flex;
+    margin: 0 -0.5rem;
+
+}
+
+/* Edit button styling */
+
+.fa-pencil {
+    color: var(--secondary);
+}
+
+.fa-trash {
+    color: var(--delete);
+}
+
+.dummy-task .edit-delete button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+
+
+/* CATEGORY TOGGLE */
+
+/* .test {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+    margin: 0 auto;
+    margin-top: 1.75rem;
+}
+
+.toggle-radio {
+    position: relative;
+}
+
+.switch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin: -30px 0 0 -95px;
+    background: none;
+    transition: all 0.2s ease;
+    border-radius: 9999px;
+  }
+  .switch span {
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    margin: -2px 0px 0px -4px;
+    background: #fff;
+    display: block;
+    transform: rotate(-45deg);
+    transition: all 0.2s ease;
+  }
+  .switch span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 12px;
+    margin-top: -8px;
+    background: #fff;
+    transition: all 0.2s ease;
+  } */
+  input[type=radio] {
+    display: none;
+  }
+  /* }
+  .switch label {
+    cursor: pointer;
+    color: rgba(0,0,0,0.2);
+    width: 80px;
+    line-height: 50px;
+    transition: all 0.2s ease;
+  }
+  label[for=yes] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+  }
+  label[for=no] {
+    position: absolute;
+    right: 0px;
+  }
+  #no:checked ~ .switch {
+    background: #eb4f37;
+  }
+  #no:checked ~ .switch span {
+    background: #fff;
+    margin-left: -8px;
+  }
+  #no:checked ~ .switch span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -8px;
+    margin-left: 8px;
+  }
+  #yes:checked ~ .switch label[for=yes] {
+    color: #fff;
+    width: 80px;
+  }
+  #no:checked ~ .switch label[for=no] {
+    color: #fff;
+  } */

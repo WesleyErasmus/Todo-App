@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:wght@200&display=swap");
+
+/* CSS Variables */
+:root {
+  /* --background-color: #e2e6ee; */
+  --background-color: #ebeef9;
+  --background: #fff;
+  --work: #f6b50f;
+  --personal: #2093ff;
+  --placeholder-text: #444444bc;
+  --delete: #ff5e5ee3;
+  --grey: #a9a9a9;
+  --dark-grey: #444444;
+
+  /* Gradient */
+  --primary-gradient: -webkit-linear-gradient(
+    top,
+    #a7d4ff 0%,
+    #005081 47%,
+    #147bb6 70%,
+    #00abe5 94%,
+    #02a8e4 100%
+  );
+
+  /* Box-shadow */
+  --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  /* Text-shadow */
+  --text-shadows: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Universal selector styling */
+* {
+  font-family: "Work Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Below removes input and checkbox default styling */
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: initial;
+  font-family: "Questrial", sans-serif;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+::placeholder {
+    color: var(--placeholder-text);
+    font-style: italic;
+}
+
+/* *** UNIVERSAL BUTTON STYLING *** */
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: initial;
+  cursor: pointer;
+}
+
+body {
+  /* background-color: var(--grey); */
+}
+
+main {
+  background-color: var(--background-color);
+  padding-top: 2rem;
+  border-radius: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  flex: 1 1 0%;
+  align-items: center;
+  justify-content: center;
+  max-width: 480px;
+  height: 95vh;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+section {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* STYLING FOR SORT BUTTON */
+select {
+  font-family: "Questrial", sans-serif;
+  margin-left: 0.3rem;
+  margin-bottom: 15px;
+  padding: 0.1rem;
+  border: none;
+  outline: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+option {
+  font-family: "Questrial", sans-serif;
+}
+/* END OF STYLING FOR SORT BUTTON */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0rem 1rem 0rem;
+  border-radius: 1rem;
+}
+
+#todo-list-form {
+  background-color: var(--background);
+  border-radius: 1rem;
+  padding-top: 1.75rem;
+  margin: 0;
+}
+
+#create-task {
+  display: block;
+  width: 85%;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  background-color: var(--background);
+  border: none;
+  border: 0.1px solid #a9a9a95a;
+  border-radius: 0.5rem;
+}
+
+#create-task:hover {
+    border: 0.1px solid var(--grey);
+}
+
+#add-task-btn {
+  z-index: 10;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  bottom: -86px;
+  color: #ffffff;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 10px solid #cbd8ff;
+  border-radius: 9999px;
+  transition: all 0.2s;
+}
+
+#add-task-btn:hover {
+  opacity: 0.85;
+}
+/* #add-task-btn:active {
+  transform: translateY(4px);
+} */
+#add-task-btn:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+.circle {
+  z-index: -1;
+  position: absolute;
+  bottom: -142px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  background-color: var(--background);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 15px -25px;
+}
+
+/* ADD TASK BUTTON SIZING */
+.fa-circle-plus {
+  /* Fix sizing! */
+  /* font-size: 2.71rem; */
+  font-size: 43.36px;
+}
+
+.create-submit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.create-task {
+  text-align: center;
+}
+
+/* Work / personal category selector styling */
+.category-selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-selectors label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  padding: 0.75rem 2rem;
+}
+
+.fa-bookmark {
+  font-size: 1rem;
+}
+
+#personal-category-btn {
+  color: var(--personal);
+  border-bottom-left-radius: 1rem;
+}
+
+#work-category-btn {
+  color: var(--work);
+  border-bottom-right-radius: 1rem;
+}
+
+#work-category-btn,
+#personal-category-btn {
+  font-size: 0.8em;
+  width: 100%;
+  height: 65px;
+  border: none;
+  outline: none;
+}
+
+#work-category-btn,
+#personal-category-btn:hover {
+    opacity: 0.85;
+}
+
+#list-header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+#search-filter-section {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+#filter {
+    width: 70px;
+}
+
+/* SEARCH BAR STYLING */
+#search-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47%;
+}
+
+#search-bar input {
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.5rem;
+  padding-right: 0rem;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+#search-submit-btn {
+  position: absolute;
+  display: block;
+  right: 0rem;
+  top: 0;
+  background-color: var(--background);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 0.53rem;
+  color: var(--grey);
+}
+
+#tasks {
+  border-radius: 0.5rem;
+  background-color: var(--background);
+  box-shadow: var(--box-shadow);
+}
+
+#tasks .task-name {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background);
+  padding: 1.75rem;
+  margin-bottom: 0rem;
+  margin: 0 1rem;
+  border-bottom: 0.01px solid rgba(229, 225, 225, 0.919);
+}
+
+.dummy-task .task-name {
+  flex: 1 1 0%;
+}
+
+.dummy-task .task-name .text {
+  color: var(--dark-grey);
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+.dummy-task .edit-delete {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+/* Edit button styling */
+
+.fa-pencil {
+  /* ADD COLOR */
+}
+
+.fa-trash {
+  color: var(--delete);
+}
+
+.dummy-task .edit-delete button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
