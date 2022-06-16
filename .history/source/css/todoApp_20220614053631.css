@@ -1,7 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:wght@200&display=swap");
 
-/* CSS VARIABLES */
+/* CSS Variables */
 :root {
+  /* --background-color: #e2e6ee; */
+  /* --background-color: #ebeef9; */
+  --background: rgb(206, 217, 255);
+  --background-color: radial-gradient(
+    circle,
+    rgba(206, 217, 255, 1) 0%,
+    rgba(195, 207, 251, 1) 50%,
+    rgba(235, 238, 249, 1) 100%
+  );
   --light-background: #fff;
   --work: #f6b50f;
   --personal: #2093ff;
@@ -10,7 +19,7 @@
   --grey: #a9a9a9;
   --dark-grey: #444444;
 
-  /* GRADIENT COLORS */
+  /* Gradient */
   --primary-gradient: -webkit-linear-gradient(
     top,
     #a7d4ff 0%,
@@ -19,22 +28,15 @@
     #00abe5 94%,
     #02a8e4 100%
   );
-  --background: rgb(206, 217, 255);
-  --background-color: radial-gradient(
-    circle,
-    rgba(206, 217, 255, 1) 0%,
-    rgba(195, 207, 251, 1) 50%,
-    rgba(235, 238, 249, 1) 100%
-  );
 
-  /* BOX-SHADOW */
+  /* Box-shadow */
   --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  /* TEXT-SHADOW */
+  /* Text-shadow */
   --text-shadows: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-/* UNIVERSAL SELECTOR STYLING */
+/* Universal selector styling */
 * {
   font-family: "Work Sans", sans-serif;
   box-sizing: border-box;
@@ -63,7 +65,7 @@ input[type="radio"] {
   font-style: italic;
 }
 
-/* UNIVERSAL BUTTON STYLING */
+/* *** UNIVERSAL BUTTON STYLING *** */
 button {
   appearance: none;
   border: none;
@@ -208,7 +210,7 @@ header {
   text-align: center;
 }
 
-/* STYLING FOR CATEGORIES(WORK / PERSONAL  */
+/* Work / personal category selector styling */
 .category-selectors {
   display: flex;
   justify-content: center;
@@ -316,13 +318,13 @@ header {
   color: var(--grey);
 }
 
-#task-list {
+#tasks {
   border-radius: 0.5rem;
   background-color: var(--light-background);
   box-shadow: var(--box-shadow);
 }
 
-#task-list .task-name {
+#tasks .task-name {
   display: flex;
   justify-content: space-between;
   background-color: var(--light-background);
@@ -357,8 +359,9 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-/* DELETE BUTTON STYLING */
 .fa-trash {
+  /* background: rgb(255,85,85);
+    background: linear-gradient(90deg, rgba(255,85,85,1) 0%, rgba(101,23,23,1) 100%); */
   background: rgb(255, 0, 14);
   background: linear-gradient(
     180deg,
@@ -385,6 +388,7 @@ header {
 .edit:hover,
 .delete:hover {
   opacity: 0.75;
+  /* transform: translateY(-1px); */
 }
 
 .edit:active,

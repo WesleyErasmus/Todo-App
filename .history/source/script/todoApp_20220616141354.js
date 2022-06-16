@@ -25,10 +25,10 @@ window.addEventListener('load', () => {
         // adds new tasks to the "tasks" array in localStorage
         tasks.push(task);
 
-        // sets "tasks" to a string (primitive value - string or number) before adding it to the tasks array in localStorage
+        
         localStorage.setItem("tasks", JSON.stringify(tasks));
 
-        // Resets the Tasks form to clear the task input field and the category radio buttons after the task submit button is clicked. 
+        
         e.target.reset();
 
     

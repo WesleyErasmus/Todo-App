@@ -316,13 +316,13 @@ header {
   color: var(--grey);
 }
 
-#task-list {
+#tasks {
   border-radius: 0.5rem;
   background-color: var(--light-background);
   box-shadow: var(--box-shadow);
 }
 
-#task-list .task-name {
+#tasks .task-name {
   display: flex;
   justify-content: space-between;
   background-color: var(--light-background);
@@ -357,7 +357,6 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-/* DELETE BUTTON STYLING */
 .fa-trash {
   background: rgb(255, 0, 14);
   background: linear-gradient(
@@ -385,6 +384,7 @@ header {
 .edit:hover,
 .delete:hover {
   opacity: 0.75;
+  /* transform: translateY(-1px); */
 }
 
 .edit:active,
