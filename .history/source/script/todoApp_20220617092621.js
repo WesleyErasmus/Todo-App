@@ -86,7 +86,10 @@ function printTasksToDOM() {
     taskLabel.appendChild(taskCategory);
     // Nesting task-description in task-content
     taskContent.appendChild(taskDescription);
-    // Edit, Delete, show description buttons nested in edit-delete container
+
+    taskInput.appendChild(childNode);
+    taskCategory.appendChild(childNode);
+    
     editDeleteContainer.appendChild(editButton);
     editDeleteContainer.appendChild(deleteButton);
     editDeleteContainer.appendChild(showDescription);

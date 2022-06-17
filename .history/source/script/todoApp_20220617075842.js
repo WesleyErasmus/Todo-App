@@ -51,12 +51,12 @@ function printTasksToDOM() {
     taskInput.checked = task.done;
     // <input id="personal-category"> || <input id="work-category">
     const taskCategory = document.createElement("input");
+    // <div class="task-title">
+    const taskTitle = document.createElement("div");
+    taskTitle.classList.add("task-title");
     // Test to see if adding bookmark image is added to the task
     // Google how to add category color to bookmark images
     taskCategory.classList.add(`"<i class="fa-solid fa-bookmark"></i>"`);
-    // <div class="task-content">
-    const taskContent = document.createElement("div");
-    taskContent.classList.add("task-content");
     // <div class="edit-delete">
     const editDeleteContainer = document.createElement("div");
     editDeleteContainer.classList.add("edit-delete");
@@ -73,24 +73,16 @@ function printTasksToDOM() {
     const taskDescription = document.createElement("p");
     taskDescription.classList.add("task-description")
 
-    deleteButton.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
-    editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
-    taskContent.innerHTML = `<input type="text" value="${task.title}" readonly>`;
-
-    // Child elements nested within task-item div
-    taskItem.appendChild(taskLabel);
-    taskItem.appendChild(taskContent);
-    taskItem.appendChild(editDeleteContainer);
-    // Child elements nested within the task label
-    taskLabel.appendChild(taskInput);
-    taskLabel.appendChild(taskCategory);
-    // Nesting task-description in task-content
-    taskContent.appendChild(taskDescription);
-    // Edit, Delete, show description buttons nested in edit-delete container
-    editDeleteContainer.appendChild(editButton);
-    editDeleteContainer.appendChild(deleteButton);
-    editDeleteContainer.appendChild(showDescription);
-    
+    taskItem
+    taskLabel
+    taskInput
+    taskCategory
+    taskTitle
+    editDeleteContainer
+    editButton
+    deleteButton
+    showDescription
+    taskDescription
 
 
 

@@ -73,24 +73,23 @@ function printTasksToDOM() {
     const taskDescription = document.createElement("p");
     taskDescription.classList.add("task-description")
 
-    deleteButton.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
-    editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
-    taskContent.innerHTML = `<input type="text" value="${task.title}" readonly>`;
+    innerHTML = 
+    parentNode.appendChild(childNode);
 
-    // Child elements nested within task-item div
     taskItem.appendChild(taskLabel);
     taskItem.appendChild(taskContent);
     taskItem.appendChild(editDeleteContainer);
-    // Child elements nested within the task label
+    taskItem.appendChild(childNode);
     taskLabel.appendChild(taskInput);
     taskLabel.appendChild(taskCategory);
-    // Nesting task-description in task-content
-    taskContent.appendChild(taskDescription);
-    // Edit, Delete, show description buttons nested in edit-delete container
-    editDeleteContainer.appendChild(editButton);
-    editDeleteContainer.appendChild(deleteButton);
-    editDeleteContainer.appendChild(showDescription);
-    
+    taskInput.appendChild(childNode);
+    taskCategory.appendChild(childNode);
+    taskTitle.appendChild(childNode);
+    editDeleteContainer.appendChild(childNode);
+    editButton.appendChild(childNode);
+    deleteButton.appendChild(childNode);
+    showDescription.appendChild(childNode);
+    taskDescription.appendChild(childNode);
 
 
 

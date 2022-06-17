@@ -342,19 +342,19 @@ background-color: var(--work);
   border-bottom: 0.01px solid rgba(229, 225, 225, 0.919);
 }
 
-.task-content .task-item {
+.task-container .task-item {
   flex: 1 1 0%;
 }
 
-.task-content .task-item .text {
+.task-container .task-item .text {
   color: var(--dark-grey);
   width: 100%;
   display: block;
   transition: 0.4s;
 }
 
-.task-content .edit-delete {
-  /* display: flex; */
+.task-container .edit-delete {
+  display: flex;
   margin: 0 -0.5rem;
 }
 
@@ -380,7 +380,7 @@ background-color: var(--work);
   -webkit-text-fill-color: transparent;
 }
 
-.task-content .edit-delete button {
+.task-container .edit-delete button {
   cursor: pointer;
   margin: 0 0.5rem;
   font-size: 0.8rem;
