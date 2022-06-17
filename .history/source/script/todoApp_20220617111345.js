@@ -112,7 +112,7 @@ function printTasksToDOM() {
         // check if placement of this if statement needs to be moved
         // If statement to delegate task categories
         
-        if (task.category == "personal") {
+        if (task.category == "Personal") {
             taskCategory.classList.add("personal-category")
         } else {
             taskCategory.classList.add("work-category")

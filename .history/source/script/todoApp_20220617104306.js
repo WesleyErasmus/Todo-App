@@ -34,6 +34,7 @@ window.addEventListener('load', () => {
         e.target.reset();
 
         printTasksToDOM()
+    
     })
 
     printTasksToDOM()
@@ -51,7 +52,6 @@ function printTasksToDOM() {
     tasks.forEach(task => {
         // <div class="task-item">
         const taskItem = document.createElement("div");
-        taskItem.classList.add("task-item");
         
         // label used to append task input field and category field to task items
         const taskLabel = document.createElement("label");
@@ -60,23 +60,31 @@ function printTasksToDOM() {
         taskInput.type = "checkbox";
         taskInput.checked = task.done;
         // <input id="personal-category"> || <input id="work-category">
-        const taskCategory = document.createElement("label"); //check if it should be "label or another type of HTML tag"
+        const taskCategory = document.createElement("input");
+        
         // <div class="task-content">
         const taskContent = document.createElement("div");
+        
         // <div class="edit-delete">
         const editDeleteContainer = document.createElement("div");
+        
         // < class="edit">
         const editButton = document.createElement("button");
+        
         // <div class="delete">
         const deleteButton = document.createElement("button");
+        
         // <button class="show-hide-description">
         const showDescription = document.createElement("button");
+        
         // <p class="task-description">
         const taskDescription = document.createElement("p");
         
+
+        taskItem.classList.add("task-item");
         // Test to see if adding bookmark image is added to the task
         // Google how to add category color to bookmark images
-        // taskCategory.classList.add("personal-category-btn", "fa-bookmark");
+        taskCategory.classList.add(`"<i class="fa-solid fa-bookmark"></i>"`);
         taskContent.classList.add("task-content");
         editDeleteContainer.classList.add("edit-delete");
         editButton.classList.add("edit")
@@ -86,7 +94,6 @@ function printTasksToDOM() {
 
         deleteButton.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
         editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
-        taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;
         taskContent.innerHTML = `<input type="text" value="${task.title}" readonly>`;
         taskDescription.innerHTML = `<input type="text" value="${task.description}" readonly>`;
 
@@ -112,11 +119,11 @@ function printTasksToDOM() {
         // check if placement of this if statement needs to be moved
         // If statement to delegate task categories
         
-        if (task.category == "personal") {
-            taskCategory.classList.add("personal-category")
-        } else {
-            taskCategory.classList.add("work-category")
-        }
+        // if (task.category == "Personal") {
+        //     taskCategory.classList.add("personal-category")
+        // } else {
+        //     taskCategory.classList.add("work-category")
+        // }
 
         // This if statement adds a HTML class of "completed". Completed tasks are then styled with text-decoration of line-through
        

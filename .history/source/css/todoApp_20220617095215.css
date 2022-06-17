@@ -238,7 +238,6 @@ color: var(--work);
 background-color: var(--work);
 } */
 
-/* Strike-through for completed tasks */
 .task-item .completed input {
 	text-decoration: line-through;
 	color: var(--grey);

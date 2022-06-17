@@ -60,7 +60,7 @@ function printTasksToDOM() {
         taskInput.type = "checkbox";
         taskInput.checked = task.done;
         // <input id="personal-category"> || <input id="work-category">
-        const taskCategory = document.createElement("label"); //check if it should be "label or another type of HTML tag"
+        const taskCategory = document.createElement("div");
         // <div class="task-content">
         const taskContent = document.createElement("div");
         // <div class="edit-delete">
@@ -112,11 +112,11 @@ function printTasksToDOM() {
         // check if placement of this if statement needs to be moved
         // If statement to delegate task categories
         
-        if (task.category == "personal") {
-            taskCategory.classList.add("personal-category")
-        } else {
-            taskCategory.classList.add("work-category")
-        }
+        // if (task.category == "Personal") {
+        //     taskCategory.classList.add("personal-category")
+        // } else {
+        //     taskCategory.classList.add("work-category")
+        // }
 
         // This if statement adds a HTML class of "completed". Completed tasks are then styled with text-decoration of line-through
        

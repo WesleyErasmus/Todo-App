@@ -112,11 +112,11 @@ function printTasksToDOM() {
         // check if placement of this if statement needs to be moved
         // If statement to delegate task categories
         
-        if (task.category == "personal") {
-            taskCategory.classList.add("personal-category")
-        } else {
-            taskCategory.classList.add("work-category")
-        }
+        // if (task.category == "Personal") {
+        //     taskCategory.classList.add("personal-category")
+        // } else {
+        //     taskCategory.classList.add("work-category")
+        // }
 
         // This if statement adds a HTML class of "completed". Completed tasks are then styled with text-decoration of line-through
        
