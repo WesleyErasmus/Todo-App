@@ -322,7 +322,7 @@ header {
   box-shadow: var(--box-shadow);
 }
 
-#task-list .task-item {
+#task-list .task {
   display: flex;
   justify-content: space-between;
   background-color: var(--light-background);
@@ -332,11 +332,11 @@ header {
   border-bottom: 0.01px solid rgba(229, 225, 225, 0.919);
 }
 
-.task-container .task-item {
+.task-container .task {
   flex: 1 1 0%;
 }
 
-.task-container .task-item .text {
+.task-container .task .text {
   color: var(--dark-grey);
   width: 100%;
   display: block;

@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
 })
 
 function printTasksToDOM() {
-    // <div class="task-item">
+
     const taskItem = document.createElement("div");
     taskItem.classList.add("task-item");
 
@@ -49,38 +49,30 @@ function printTasksToDOM() {
     input.type = "checkbox";
     input.checked = task.done;
 
-    // <div class="task-title">
+    const taskLabel = document.createElement("label");
+    // label used to append a category to task items
+
     const taskTitle = document.createElement("div");
     taskTitle.classList.add("task-title");
 
-    // label used to append a category to task items
-    const taskLabel = document.createElement("label");
-
-    // <label id="personal-category-btn"> || <label id="work-category-btn">
     const taskCategory = document.createElement("category");
     // Test to see if adding bookmark image is added to the task
     // Google how to add catagory color to bookmark images
     taskCategory.classList.add(`"<i class="fa-solid fa-bookmark"></i>"`);
 
-    // <div class="edit-delete">
     const editDeleteContainer = document.createElement("div");
     editDeleteContainer.classList.add("edit-delete");
 
-    // < class="edit">
     const editButton = document.createElement("button");
-    editButton.classList.add("edit")
 
-    // <div class="delete">
+
     const deleteButton = document.createElement("button");
-    deleteButton.classList.add("delete")
 
-    // <button class="show-hide-description">
+
     const showDescription = document.createElement("button");
-    showDescription.classList.add("show-hide-description")
 
-    // <p class="task-description">
-    const taskDescription = document.createElement("p");
-    taskDescription.classList.add("task-description")
+
+    const description = document.createElement("p");
 
 
 

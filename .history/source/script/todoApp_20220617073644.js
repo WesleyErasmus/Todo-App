@@ -78,7 +78,7 @@ function printTasksToDOM() {
     const showDescription = document.createElement("button");
     showDescription.classList.add("show-hide-description")
 
-    // <p class="task-description">
+
     const taskDescription = document.createElement("p");
     taskDescription.classList.add("task-description")
 

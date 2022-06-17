@@ -62,23 +62,21 @@ function printTasksToDOM() {
     // Google how to add catagory color to bookmark images
     taskCategory.classList.add(`"<i class="fa-solid fa-bookmark"></i>"`);
 
-    // <div class="edit-delete">
     const editDeleteContainer = document.createElement("div");
     editDeleteContainer.classList.add("edit-delete");
 
-    // < class="edit">
     const editButton = document.createElement("button");
     editButton.classList.add("edit")
 
-    // <div class="delete">
+
     const deleteButton = document.createElement("button");
     deleteButton.classList.add("delete")
 
-    // <button class="show-hide-description">
+
     const showDescription = document.createElement("button");
     showDescription.classList.add("show-hide-description")
 
-    // <p class="task-description">
+
     const taskDescription = document.createElement("p");
     taskDescription.classList.add("task-description")
 
