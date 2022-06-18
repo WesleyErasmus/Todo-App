@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <script src="https://kit.fontawesome.com/81ea498f91.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/source/css/todoApp.css">
+    <script src="/source/script/todoApp.js" defer></script>
+</head>
+
+<body>
+    <!-- App wrapper -->
+    <main class="app-wrapper">
+        <!-- App header -->
+        <header>
+            <!-- Greeting and Name -->
+            <div>
+                <h3>Good afternoon, </h3>
+                <h5>Wesley Erasmus</h5>
+            </div>
+            <!-- Profile picture -->
+            <div id="profile-picture">
+                <img src="/images/user.png" alt="" style="width: 43px;">
+            </div>
+        </header>
+
+        <!-- Categories section -->
+        <section>
+            <form id="todo-list-form">
+                <div class="create-submit">
+                    <input
+                        type="text"
+                        name="title"
+                        id="title"
+                        placeholder="Add a new task here..." />
+                        
+                    <textarea
+                        cols="40"
+                        rows="2"
+                        type="text"
+                        name="description"
+                        id="description"
+                        placeholder="Add task description (optional)...">
+                    </textarea>
+                    <button
+                        id="add-task-btn"
+                        type="submit"
+                        value="create-new-task">
+                        
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </button>
+                    <div class="circle"></div>
+                </div>
+
+
+                <div class="category-selectors">
+                    <!-- Personal category -->
+                    <label
+                    class="personal-category-btn">
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Personal"
+                            class="personal-category"
+                            id="personal-category" checked />
+                            
+                            <i class="fa-solid fa-bookmark"></i>
+                        <h4 class="category-h4">Personal</h4>
+                    </label>
+                    <!-- Work category -->
+                    <label 
+                    class="work-category-btn">
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Work"
+                            class="work-category"
+                            id="work-category" />
+
+                        <i class="fa-solid fa-bookmark"></i>
+                        <h4 class="category-h4">Work</h4>
+                    </label>
+                </div>
+                <!-- End of categories div -->
+                </div>
+            </form>
+        </section>
+
+        <!-- Task list is created here, new tasks are outputted below -->
+        <section class="todo-list-output">
+            <div id="list-header">
+                <div>Your tasks list</div>
+            </div>
+            <!-- SEARCH BAR -->
+            <div id="search-filter-section">
+                <!-- <form id="search-bar">
+                <input type="text"
+                id="search-bar"
+                placeholder="Search for task...">
+                <button type="submit"><i class="fa fa-search"
+                id="search-submit-btn"></i></button>
+                </form> -->
+                <!-- Classic filter dropdown -->
+                <div>
+                    <select name="filter" id="filter">
+                        <option value="Date">Sort by date</option>
+                        <option value="Name">Sort by title</option>
+                    </select>
+                </div>
+
+            </div>
+            <!-- Actual task list output -->
+            <div class="task-list" id="task-list">
+
+                    <div class="task-item">
+
+                        <label id="personal-category-btn">
+                        <input class="completed" type="checkbox" />
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Work"
+                            id="work-category" />
+                            <i class="fa-solid fa-bookmark"></i>
+                        </label>
+                        <div class="task-content">
+                            Test title
+                            <p class="task-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti.</p>
+                        </div>
+                        
+                        <div class="edit-delete">
+                            <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+                            <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            <button class="show-hide-description">Show description
+                            </button>
+                        </div>
+                        
+                    </div>
+            </div>
+
+        </section>
+
+    </main> <!-- End of App wrapper -->
+    <!-- Save icon and task complete icon -->
+    
+    <!-- <li><i class="fa-solid fa-check"></i></li>
+    <li><i class="fa-solid fa-floppy-disk"></i></li> -->
+
+</body>
+
+</html>
