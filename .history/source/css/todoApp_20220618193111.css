@@ -365,7 +365,6 @@ input.task-title {
 }
 
 p.task-description {
-  display: none;
   font-size: 1rem;
   color: #000;
   font-weight: 700;
@@ -427,7 +426,6 @@ p.task-description {
   text-decoration: underline;
   position: relative;
   margin-left: 5px;
-  /* CHANGE COLOR */
   color: darkblue;
 }
 

@@ -169,12 +169,13 @@ function printTasksToDOM() {
 
     // EDIT DESCRIPTION IS NOT WORKING
         showDescription.addEventListener('click', (e) => {
-            if(taskDescription.style.display === "block"){
+            // taskDescription.style.display = "hidden" = true;
+            if(taskDescription.style.display == "none"){
                 // shrink content
                 showDescription.innerHTML = "show description";
                 taskDescription.style.display = "none";
             } else {
-                // expand content
+                // expand description
                 taskDescription.style.display = "block"
                 showDescription.innerHTML = "hide description"
             }

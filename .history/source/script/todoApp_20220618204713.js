@@ -102,7 +102,7 @@ function printTasksToDOM() {
         taskContent.innerHTML = `<input type="text" class="task-title" value="${task.title}" readonly>`;
         // taskDescription.innerHTML = `<input type="text" value="${task.description}" readonly>`;
         taskDescription.innerHTML = `${task.description}`;
-        showDescription.innerHTML = "show description"
+        showDescription.innerHTML = "show more"
 
         // Child elements nested within task-item div
         taskItem.appendChild(taskLabel);
@@ -168,15 +168,16 @@ function printTasksToDOM() {
         })
 
     // EDIT DESCRIPTION IS NOT WORKING
+    taskDescription.style.display = "hidden";
         showDescription.addEventListener('click', (e) => {
-            if(taskDescription.style.display === "block"){
+            if(taskDescription.className == "open"){
                 // shrink content
-                showDescription.innerHTML = "show description";
-                taskDescription.style.display = "none";
+                taskDescription.className = ""
+                // showDescription.innerHTML = "show More"
             } else {
-                // expand content
-                taskDescription.style.display = "block"
-                showDescription.innerHTML = "hide description"
+                // expand description
+                taskDescription.className = "open", "task-description"
+                showDescription.innerHTML = "show Less"
             }
         
         })

@@ -359,21 +359,18 @@ div.task-item:hover {
   background-color: #ececec4e !important;
 }
 
-input.task-title {
+.task-title {
   font-size: 1.1rem;
-  width: 100%;
 }
 
 p.task-description {
-  display: none;
   font-size: 1rem;
   color: #000;
   font-weight: 700;
   margin: 5px;
-  width: 90%;
+  width: 80%;
 }
 .task-content {
-  width: 100%;
   margin-left: 20px;
 }
 
@@ -390,8 +387,9 @@ p.task-description {
 
 .edit-delete {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: start;
+  margin: 0 -0.5rem;
 }
 
 /* Edit button styling */
@@ -426,9 +424,9 @@ p.task-description {
   font-size: 0.95rem;
   text-decoration: underline;
   position: relative;
-  margin-left: 5px;
-  /* CHANGE COLOR */
-  color: darkblue;
+  /* right: -25px;
+  bottom: -30px; */
+  color: var(--dark-grey);
 }
 
 .show-hide-description:hover {

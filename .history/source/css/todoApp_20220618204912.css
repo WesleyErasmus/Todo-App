@@ -365,7 +365,6 @@ input.task-title {
 }
 
 p.task-description {
-  display: none;
   font-size: 1rem;
   color: #000;
   font-weight: 700;

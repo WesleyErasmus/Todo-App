@@ -168,17 +168,24 @@ function printTasksToDOM() {
         })
 
     // EDIT DESCRIPTION IS NOT WORKING
-        showDescription.addEventListener('click', (e) => {
-            if(taskDescription.style.display === "block"){
+        editButton.addEventListener('click', (e) => {
+            if(taskDescription.className == "open"){
                 // shrink content
-                showDescription.innerHTML = "show description";
-                taskDescription.style.display = "none";
+                taskDescription.className = ""
+                button.innerHTML = "show more"
             } else {
-                // expand content
-                taskDescription.style.display = "block"
-                showDescription.innerHTML = "hide description"
+                // expand description
+                taskDescription.className = "Show Less"
             }
-        
+        //     const taskDescription = taskContent.querySelector("p");
+        //     taskDescription.removeAttribute("readonly");
+        //     taskDescription.focus();
+        //     taskDescription.addEventListener('blur', (e) => {
+        //         taskDescription.setAttribute("readonly", true);
+        //         task.description = e.target.value;
+        //         localStorage.setItem("tasks", JSON.stringify(tasks));
+        //         printTasksToDOM()
+        //     })
         })
 
         // Event listener set to delete task on click

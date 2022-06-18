@@ -90,7 +90,7 @@ function printTasksToDOM() {
         editDeleteContainer.classList.add("edit-delete");
         editButton.classList.add("edit")
         deleteButton.classList.add("delete")
-        showDescription.classList.add("show-hide-description")
+        showDescription.classList.add("show-hide-description", "open")
         taskDescription.classList.add("task-description")
 
         // Adding content to created HTML elements
@@ -102,7 +102,7 @@ function printTasksToDOM() {
         taskContent.innerHTML = `<input type="text" class="task-title" value="${task.title}" readonly>`;
         // taskDescription.innerHTML = `<input type="text" value="${task.description}" readonly>`;
         taskDescription.innerHTML = `${task.description}`;
-        showDescription.innerHTML = "show description"
+        showDescription.innerHTML = "show more"
 
         // Child elements nested within task-item div
         taskItem.appendChild(taskLabel);
@@ -169,14 +169,14 @@ function printTasksToDOM() {
 
     // EDIT DESCRIPTION IS NOT WORKING
         showDescription.addEventListener('click', (e) => {
-            if(taskDescription.style.display === "block"){
+            if(taskDescription.className == "task-description"){
                 // shrink content
-                showDescription.innerHTML = "show description";
-                taskDescription.style.display = "none";
+                taskDescription.className = ""
+                // showDescription.innerHTML = "show More"
             } else {
-                // expand content
-                taskDescription.style.display = "block"
-                showDescription.innerHTML = "hide description"
+                // expand description
+                taskDescription.className = "Open"
+                showDescription.innerHTML = "show Less"
             }
         
         })

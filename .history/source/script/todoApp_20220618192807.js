@@ -108,12 +108,12 @@ function printTasksToDOM() {
         taskItem.appendChild(taskLabel);
         taskItem.appendChild(taskContent);
         taskItem.appendChild(editDeleteContainer);
+        taskItem.appendChild(showDescription);
         // Child elements nested within the task label
         taskLabel.appendChild(taskInput);
         taskLabel.appendChild(taskCategory);
         // Nesting task-description in task-content
         taskContent.appendChild(taskDescription);
-        taskContent.appendChild(showDescription);
         // Edit, Delete, show description buttons nested in edit-delete container
         editDeleteContainer.appendChild(editButton);
         editDeleteContainer.appendChild(deleteButton);
@@ -168,18 +168,17 @@ function printTasksToDOM() {
         })
 
     // EDIT DESCRIPTION IS NOT WORKING
-        showDescription.addEventListener('click', (e) => {
-            if(taskDescription.style.display === "block"){
-                // shrink content
-                showDescription.innerHTML = "show description";
-                taskDescription.style.display = "none";
-            } else {
-                // expand content
-                taskDescription.style.display = "block"
-                showDescription.innerHTML = "hide description"
-            }
-        
-        })
+        // editButton.addEventListener('click', (e) => {
+        //     const taskDescription = taskContent.querySelector("p");
+        //     taskDescription.removeAttribute("readonly");
+        //     taskDescription.focus();
+        //     taskDescription.addEventListener('blur', (e) => {
+        //         taskDescription.setAttribute("readonly", true);
+        //         task.description = e.target.value;
+        //         localStorage.setItem("tasks", JSON.stringify(tasks));
+        //         printTasksToDOM()
+        //     })
+        // })
 
         // Event listener set to delete task on click
         deleteButton.addEventListener('click', (e) => {

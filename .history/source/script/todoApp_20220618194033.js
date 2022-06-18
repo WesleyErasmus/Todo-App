@@ -168,15 +168,15 @@ function printTasksToDOM() {
         })
 
     // EDIT DESCRIPTION IS NOT WORKING
-        showDescription.addEventListener('click', (e) => {
-            if(taskDescription.style.display === "block"){
+        editButton.addEventListener('click', (e) => {
+            if(taskDescription.className == "open"){
                 // shrink content
-                showDescription.innerHTML = "show description";
-                taskDescription.style.display = "none";
+                taskDescription.className = ""
+                showDescription.innerHTML = "show More"
             } else {
-                // expand content
-                taskDescription.style.display = "block"
-                showDescription.innerHTML = "hide description"
+                // expand description
+                taskDescription.className = "Open"
+                showDescription.innerHTML = "show Less"
             }
         
         })

@@ -174,7 +174,7 @@ function printTasksToDOM() {
                 showDescription.innerHTML = "show description";
                 taskDescription.style.display = "none";
             } else {
-                // expand content
+                // expand description
                 taskDescription.style.display = "block"
                 showDescription.innerHTML = "hide description"
             }

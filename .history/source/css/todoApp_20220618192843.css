@@ -346,6 +346,7 @@ option {
 	grid-template-columns: repeat(3, 2fr);
 	grid-gap: 1rem; */
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   background-color: var(--light-background);
   padding: 1.75rem;
@@ -365,7 +366,6 @@ input.task-title {
 }
 
 p.task-description {
-  display: none;
   font-size: 1rem;
   color: #000;
   font-weight: 700;
@@ -426,9 +426,9 @@ p.task-description {
   font-size: 0.95rem;
   text-decoration: underline;
   position: relative;
-  margin-left: 5px;
-  /* CHANGE COLOR */
-  color: darkblue;
+  /* right: -25px;
+  bottom: -30px; */
+  color: var(--dark-grey);
 }
 
 .show-hide-description:hover {

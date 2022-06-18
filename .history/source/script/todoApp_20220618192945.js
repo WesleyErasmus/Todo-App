@@ -168,18 +168,17 @@ function printTasksToDOM() {
         })
 
     // EDIT DESCRIPTION IS NOT WORKING
-        showDescription.addEventListener('click', (e) => {
-            if(taskDescription.style.display === "block"){
-                // shrink content
-                showDescription.innerHTML = "show description";
-                taskDescription.style.display = "none";
-            } else {
-                // expand content
-                taskDescription.style.display = "block"
-                showDescription.innerHTML = "hide description"
-            }
-        
-        })
+        // editButton.addEventListener('click', (e) => {
+        //     const taskDescription = taskContent.querySelector("p");
+        //     taskDescription.removeAttribute("readonly");
+        //     taskDescription.focus();
+        //     taskDescription.addEventListener('blur', (e) => {
+        //         taskDescription.setAttribute("readonly", true);
+        //         task.description = e.target.value;
+        //         localStorage.setItem("tasks", JSON.stringify(tasks));
+        //         printTasksToDOM()
+        //     })
+        // })
 
         // Event listener set to delete task on click
         deleteButton.addEventListener('click', (e) => {
