@@ -91,7 +91,6 @@ function printTasksToDOM() {
         showDescription.classList.add("show-hide-description")
         taskDescription.classList.add("task-description")
 
-        // Adding content to created HTML elements
         deleteButton.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
         editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
         taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;

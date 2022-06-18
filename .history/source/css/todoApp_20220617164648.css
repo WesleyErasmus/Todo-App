@@ -83,7 +83,7 @@ main {
   flex: 1 1 0%;
   align-items: center;
   justify-content: center;
-  max-width: 600px;
+  max-width: 480px;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -229,9 +229,9 @@ header {
 }
 
 /* Strike-through for completed tasks ***NOT WORKING*** */
-.task-item.completed .task-content input{
+.task-item.completed {
 	text-decoration: line-through;
-	color: var(--grey);
+	color: var(--personal);
 }
 
 .personal-category-btn {

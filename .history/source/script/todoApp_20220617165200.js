@@ -83,7 +83,6 @@ function printTasksToDOM() {
             taskCategory.classList.add("work")
             taskCategory.style.color = "var(--work)";
         }
-        // Adding classes to created HTML elements
         taskContent.classList.add("task-content");
         editDeleteContainer.classList.add("edit-delete");
         editButton.classList.add("edit")
@@ -91,13 +90,11 @@ function printTasksToDOM() {
         showDescription.classList.add("show-hide-description")
         taskDescription.classList.add("task-description")
 
-        // Adding content to created HTML elements
         deleteButton.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
         editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
         taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;
         taskContent.innerHTML = `<input type="text" value="${task.title}" readonly>`;
         taskDescription.innerHTML = `<input type="text" value="${task.description}" readonly>`;
-        showDescription.innerHTML = "show description"
 
         // Child elements nested within task-item div
         taskItem.appendChild(taskLabel);
@@ -121,6 +118,7 @@ function printTasksToDOM() {
         if (task.completed) {
             taskItem.classList.add("completed");
         }
+
         // Below are event listeners linked to the following actions:
         // Task check box (which gets check after task is completed)
         // Edit button
@@ -137,43 +135,22 @@ function printTasksToDOM() {
             if (task.completed) {
                 taskItem.classList.add("completed")
             } else {
-                taskInput.classList.remove("completed")
+                taskItem.classList.remove("completed")
             }
             printTasksToDOM()
         });
 
         editButton.addEventListener('click', (e) => {
-            const taskInput = taskContent.querySelector("input");
-            taskInput.removeAttribute("readonly");
-            // focus() shows that the text is now editable
-            taskInput.focus();
+            const taskItem = taskContent.querySelector("input");
+            taskInput.removeAttribute.apply("readonly");
             // addeventlistener 'blur' will stop editing when clicking outside of input field
-            taskInput.addEventListener('blur', (e) => {
-                taskInput.setAttribute("readonly", true);
-                task.title = e.target.value;
+            taskItem.addEventListener('blur', (e) => {
+                taskItem.setAttribute = e.target.value;
                 localStorage.setItem("tasks", JSON.stringify(tasks));
                 printTasksToDOM()
             })
         })
-    
-        // editButton.addEventListener('click', (e) => {
-        //     const taskDescription = taskContent.querySelector("p");
-        //     taskDescription.removeAttribute("readonly");
-        //     taskDescription.focus();
-        //     taskDescription.addEventListener('blur', (e) => {
-        //         taskDescription.setAttribute("readonly", true);
-        //         task.description = e.target.value;
-        //         localStorage.setItem("tasks", JSON.stringify(tasks));
-        //         printTasksToDOM()
-        //     })
-        // })
 
-        // Event listener set to delete task on click
-        deleteButton.addEventListener('click', (e) => {
-            // using filter method to remove task.
-            tasks = tasks.filter(i => i != task);
-            localStorage.setItem("tasks", JSON.stringify(tasks));
-            printTasksToDOM()
-        })
 })
 }
+

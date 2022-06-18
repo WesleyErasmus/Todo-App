@@ -83,7 +83,6 @@ function printTasksToDOM() {
             taskCategory.classList.add("work")
             taskCategory.style.color = "var(--work)";
         }
-        // Adding classes to created HTML elements
         taskContent.classList.add("task-content");
         editDeleteContainer.classList.add("edit-delete");
         editButton.classList.add("edit")
@@ -91,7 +90,6 @@ function printTasksToDOM() {
         showDescription.classList.add("show-hide-description")
         taskDescription.classList.add("task-description")
 
-        // Adding content to created HTML elements
         deleteButton.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
         editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
         taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;

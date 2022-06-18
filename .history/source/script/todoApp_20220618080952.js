@@ -83,7 +83,6 @@ function printTasksToDOM() {
             taskCategory.classList.add("work")
             taskCategory.style.color = "var(--work)";
         }
-        // Adding classes to created HTML elements
         taskContent.classList.add("task-content");
         editDeleteContainer.classList.add("edit-delete");
         editButton.classList.add("edit")
@@ -91,7 +90,6 @@ function printTasksToDOM() {
         showDescription.classList.add("show-hide-description")
         taskDescription.classList.add("task-description")
 
-        // Adding content to created HTML elements
         deleteButton.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
         editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
         taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;
@@ -142,6 +140,7 @@ function printTasksToDOM() {
             printTasksToDOM()
         });
 
+        tasks.forEach(taskContent => {
         editButton.addEventListener('click', (e) => {
             const taskInput = taskContent.querySelector("input");
             taskInput.removeAttribute("readonly");
@@ -156,18 +155,18 @@ function printTasksToDOM() {
             })
         })
     
-        // editButton.addEventListener('click', (e) => {
-        //     const taskDescription = taskContent.querySelector("p");
-        //     taskDescription.removeAttribute("readonly");
-        //     taskDescription.focus();
-        //     taskDescription.addEventListener('blur', (e) => {
-        //         taskDescription.setAttribute("readonly", true);
-        //         task.description = e.target.value;
-        //         localStorage.setItem("tasks", JSON.stringify(tasks));
-        //         printTasksToDOM()
-        //     })
-        // })
-
+        editButton.addEventListener('click', (e) => {
+            const taskDescription = taskContent.querySelector("p");
+            taskDescription.removeAttribute("readonly");
+            taskDescription.focus();
+            taskDescription.addEventListener('blur', (e) => {
+                taskDescription.setAttribute("readonly", true);
+                task.description = e.target.value;
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+                printTasksToDOM()
+            })
+        })
+    })
         // Event listener set to delete task on click
         deleteButton.addEventListener('click', (e) => {
             // using filter method to remove task.

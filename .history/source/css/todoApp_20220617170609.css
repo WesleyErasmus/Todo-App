@@ -229,9 +229,9 @@ header {
 }
 
 /* Strike-through for completed tasks ***NOT WORKING*** */
-.task-item.completed .task-content input{
+.completed {
 	text-decoration: line-through;
-	color: var(--grey);
+	color: var(--personal);
 }
 
 .personal-category-btn {

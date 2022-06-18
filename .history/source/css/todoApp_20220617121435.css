@@ -83,7 +83,7 @@ main {
   flex: 1 1 0%;
   align-items: center;
   justify-content: center;
-  max-width: 600px;
+  max-width: 480px;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -228,8 +228,18 @@ header {
   font-size: 1rem;
 }
 
-/* Strike-through for completed tasks ***NOT WORKING*** */
-.task-item.completed .task-content input{
+/* .personal-category input{
+  color: var(--personal);
+  background-color: var(--personal);
+}
+
+.work-category input{
+color: var(--work);
+background-color: var(--work);
+} */
+
+/* Strike-through for completed tasks */
+.task-item .completed input {
 	text-decoration: line-through;
 	color: var(--grey);
 }

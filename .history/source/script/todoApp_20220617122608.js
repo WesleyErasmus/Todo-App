@@ -57,8 +57,10 @@ function printTasksToDOM() {
         const taskLabel = document.createElement("label");
         // <input type="checkbox" />
         const taskInput = document.createElement("input");
+        taskInput.type = "checkbox";
+        taskInput.checked = task.completed;
         // <input id="personal-category"> || <input id="work-category">
-        const taskCategory = document.createElement("div"); //check if it should be "label or another type of HTML tag"
+        const taskCategory = document.createElement("label"); //check if it should be "label or another type of HTML tag"
         // <div class="task-content">
         const taskContent = document.createElement("div");
         // <div class="edit-delete">
@@ -71,19 +73,9 @@ function printTasksToDOM() {
         const showDescription = document.createElement("button");
         // <p class="task-description">
         const taskDescription = document.createElement("p");
-
-        taskInput.type = "checkbox";
-        taskInput.checked = task.completed;
         
-         // If statement to delegate task categories
-         if (task.category == "Personal") {
-            taskCategory.classList.add("personal")
-            taskCategory.style.color = "var(--personal)";
-        } else {
-            taskCategory.classList.add("work")
-            taskCategory.style.color = "var(--work)";
-        }
-        // Adding classes to created HTML elements
+        // Google how to add category color to bookmark images
+        // taskCategory.classList.add("personal-category-btn", "fa-bookmark");
         taskContent.classList.add("task-content");
         editDeleteContainer.classList.add("edit-delete");
         editButton.classList.add("edit")
@@ -91,13 +83,11 @@ function printTasksToDOM() {
         showDescription.classList.add("show-hide-description")
         taskDescription.classList.add("task-description")
 
-        // Adding content to created HTML elements
         deleteButton.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
         editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
         taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;
         taskContent.innerHTML = `<input type="text" value="${task.title}" readonly>`;
         taskDescription.innerHTML = `<input type="text" value="${task.description}" readonly>`;
-        showDescription.innerHTML = "show description"
 
         // Child elements nested within task-item div
         taskItem.appendChild(taskLabel);
@@ -115,65 +105,33 @@ function printTasksToDOM() {
         // Below code appends each task item to the task-list class
         taskList.appendChild(taskItem);
 
-       
+        // If statement to delegate task categories
+        if (task.category == "Personal") {
+            taskCategory.classList.add("personal-category-btn")
+        } else {
+            taskCategory.classList.add("work-category-btn")
+        }
 
         // This if statement adds a HTML class of "completed". Completed tasks are then styled with text-decoration of line-through
         if (task.completed) {
-            taskItem.classList.add("completed");
+            taskItem.classList.add("completed")
         }
+
         // Below are event listeners linked to the following actions:
         // Task check box (which gets check after task is completed)
         // Edit button
         // Delete button
         // Show task description button
 
-        // Change eventListener to change task from unchecked to checked
-        taskInput.addEventListener("change", (e) => {
+        taskInput.addEventListener("complete", (e) => {
             // Check that this code is correct
             task.completed = e.target.checked;
             // storing checked / unchecked status of tasks to JSON localStorage
             localStorage.setItem("tasks", JSON.stringify(tasks));
 
-            if (task.completed) {
-                taskItem.classList.add("completed")
-            } else {
-                taskInput.classList.remove("completed")
-            }
             printTasksToDOM()
         });
 
-        editButton.addEventListener('click', (e) => {
-            const taskInput = taskContent.querySelector("input");
-            taskInput.removeAttribute("readonly");
-            // focus() shows that the text is now editable
-            taskInput.focus();
-            // addeventlistener 'blur' will stop editing when clicking outside of input field
-            taskInput.addEventListener('blur', (e) => {
-                taskInput.setAttribute("readonly", true);
-                task.title = e.target.value;
-                localStorage.setItem("tasks", JSON.stringify(tasks));
-                printTasksToDOM()
-            })
-        })
-    
-        // editButton.addEventListener('click', (e) => {
-        //     const taskDescription = taskContent.querySelector("p");
-        //     taskDescription.removeAttribute("readonly");
-        //     taskDescription.focus();
-        //     taskDescription.addEventListener('blur', (e) => {
-        //         taskDescription.setAttribute("readonly", true);
-        //         task.description = e.target.value;
-        //         localStorage.setItem("tasks", JSON.stringify(tasks));
-        //         printTasksToDOM()
-        //     })
-        // })
-
-        // Event listener set to delete task on click
-        deleteButton.addEventListener('click', (e) => {
-            // using filter method to remove task.
-            tasks = tasks.filter(i => i != task);
-            localStorage.setItem("tasks", JSON.stringify(tasks));
-            printTasksToDOM()
-        })
 })
 }
+
