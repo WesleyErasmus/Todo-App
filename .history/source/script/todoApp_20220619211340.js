@@ -99,7 +99,7 @@ function printTasksToDOM() {
     taskContent.innerHTML = `<input type="text" class="task-title" value="${task.title}" readonly>`;
     // taskDescription.innerHTML = `<input type="text" value="${task.description}" readonly>`;
     taskDescription.innerHTML = `${task.description}`;
-    showDescription.innerHTML = "Read description";
+    showDescription.innerHTML = "read description";
 
     // Child elements nested within task-item div
     taskItem.appendChild(taskLabel);
@@ -138,7 +138,7 @@ function printTasksToDOM() {
       if (task.completed) {
         taskItem.classList.add("completed");
       } else {
-        taskItem.classList.remove("completed");
+        taskInput.classList.remove("completed");
       }
       printTasksToDOM();
     });

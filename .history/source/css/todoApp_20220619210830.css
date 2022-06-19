@@ -212,8 +212,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
 }
 /* Category labels */
 .category-selectors label {
@@ -224,14 +222,6 @@ header {
   background-color: var(--light-background);
   padding: 0.75rem 2rem;
 }
-
-/* *** WORK IN PROGRESS *** */
-/* .personal-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #00abe5;
-}
-.work-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #f6b50f;
-} */
 
 /* Color for personal category button */
 .personal-category-btn {
@@ -456,7 +446,7 @@ Task title, Task description, Show description button */
 /* TASK DESCRIPTION SHOW / HIDE STYLING */
 /* Show/hide button styling */
 .show-hide-description {
-  font-size: 0.85rem;
+  font-size: 1rem;
   position: relative;
   color: blue;
 }

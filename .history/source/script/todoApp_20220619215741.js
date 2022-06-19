@@ -77,9 +77,11 @@ function printTasksToDOM() {
     if (task.category == "Personal") {
       taskCategory.classList.add("personal");
       taskCategory.style.color = "var(--personal)";
+      document.querySelector(".category-glow").style.backgroundColor = "var(--personal)";
     } else {
       taskCategory.classList.add("work");
       taskCategory.style.color = "var(--work)";
+      document.querySelector(".category-glow").style.backgroundColor = "var(--work)";
     }
     // Adding classes to created HTML elements
 
@@ -138,7 +140,7 @@ function printTasksToDOM() {
       if (task.completed) {
         taskItem.classList.add("completed");
       } else {
-        taskItem.classList.remove("completed");
+        taskInput.classList.remove("completed");
       }
       printTasksToDOM();
     });

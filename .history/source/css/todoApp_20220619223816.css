@@ -225,13 +225,13 @@ header {
   padding: 0.75rem 2rem;
 }
 
-/* *** WORK IN PROGRESS *** */
-/* .personal-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #00abe5;
+.personal-category:checked ~ .fa-bookmark {
+  font-size: 1.4rem;
 }
-.work-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #f6b50f;
-} */
+.work-category:checked ~ .fa-bookmark {
+  text-decoration: underline;
+  font-size: 1.4rem;
+}
 
 /* Color for personal category button */
 .personal-category-btn {

@@ -97,7 +97,7 @@ main {
   flex: 1 1 0%;
   align-items: center;
   justify-content: center;
-  max-width: 550px;
+  max-width: 600px;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -212,8 +212,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
 }
 /* Category labels */
 .category-selectors label {
@@ -224,14 +222,6 @@ header {
   background-color: var(--light-background);
   padding: 0.75rem 2rem;
 }
-
-/* *** WORK IN PROGRESS *** */
-/* .personal-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #00abe5;
-}
-.work-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #f6b50f;
-} */
 
 /* Color for personal category button */
 .personal-category-btn {
@@ -426,18 +416,16 @@ Task title, Task description, Show description button */
 .edit,
 .delete {
   position: relative;
-  top: -30px;
-  right: -10px;
   transition: all 0.1s;
   cursor: pointer;
-  /* margin: 0 0.5rem; */
+  margin: 0 0.5rem;
   font-size: 0.8rem;
   font-weight: 700;
 }
 /* Edit & delete button container */
 .edit-delete {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
 }
 /* Hover */
@@ -456,7 +444,7 @@ Task title, Task description, Show description button */
 /* TASK DESCRIPTION SHOW / HIDE STYLING */
 /* Show/hide button styling */
 .show-hide-description {
-  font-size: 0.85rem;
+  font-size: 1rem;
   position: relative;
   color: blue;
 }
@@ -473,16 +461,18 @@ Task title, Task description, Show description button */
 /* FONT-AWESOME BUTTON STYLING */
 /* EDIT BUTTON STYLING */
 .fa-pencil {
-  font-size: 1.1rem;
+  /* ADD COLOR */
+  font-size: 1.25rem;
   margin: 5px;
+  /* color: #adbfff; */
   background: rgb(100,134,255);
-  background: linear-gradient(90deg, rgb(38, 85, 255) 21%, rgb(75, 114, 255) 39%, rgb(107, 137, 255) 62%, rgb(35, 83, 255) 86%);
+  background: linear-gradient(90deg, rgb(38, 85, 255) 21%, rgb(75, 114, 255) 39%, rgba(125,152,255,1) 62%, rgba(78,117,255,1) 86%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 /* DELETE BUTTON STYLING */
 .fa-trash {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin: 5px;
   background: var(--delete);
   -webkit-background-clip: text;
@@ -490,7 +480,7 @@ Task title, Task description, Show description button */
 }
 /* SAVE BUTTON STYLING */
 .fa-floppy-disk {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin: 5px;
   background: var(--primary-gradient);
   -webkit-background-clip: text;

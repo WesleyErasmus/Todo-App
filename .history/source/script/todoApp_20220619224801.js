@@ -136,9 +136,9 @@ function printTasksToDOM() {
       localStorage.setItem("tasks", JSON.stringify(tasks));
 
       if (task.completed) {
-        taskItem.classList.add("completed");
+        taskContent.classList.add("completed");
       } else {
-        taskItem.classList.remove("completed");
+        taskContent.classList.remove("completed");
       }
       printTasksToDOM();
     });

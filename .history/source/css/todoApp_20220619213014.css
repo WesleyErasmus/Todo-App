@@ -225,14 +225,12 @@ header {
   padding: 0.75rem 2rem;
 }
 
-/* *** WORK IN PROGRESS *** */
-/* .personal-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #00abe5;
+.personal-category-btn:checked ~ .work-category-btn {
+  background-color: var(--dark-grey) !important;
 }
-.work-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #f6b50f;
+/* #no:checked ~ .switch {
+  background: #eb4f37;
 } */
-
 /* Color for personal category button */
 .personal-category-btn {
   color: var(--personal);

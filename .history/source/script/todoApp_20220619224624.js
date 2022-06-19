@@ -137,8 +137,10 @@ function printTasksToDOM() {
 
       if (task.completed) {
         taskItem.classList.add("completed");
+        taskDescription.classList.add("completed");
       } else {
-        taskItem.classList.remove("completed");
+        taskInput.classList.remove("completed");
+        taskDescription.classList.remove("completed");
       }
       printTasksToDOM();
     });

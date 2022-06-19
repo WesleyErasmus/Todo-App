@@ -225,13 +225,10 @@ header {
   padding: 0.75rem 2rem;
 }
 
-/* *** WORK IN PROGRESS *** */
-/* .personal-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #00abe5;
+.personal-category-btn:checked ~ .category-selectors {
+  background-color: var(--dark-grey);
+  z-index: 25;
 }
-.work-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #f6b50f;
-} */
 
 /* Color for personal category button */
 .personal-category-btn {

@@ -225,14 +225,34 @@ header {
   padding: 0.75rem 2rem;
 }
 
-/* *** WORK IN PROGRESS *** */
-/* .personal-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #00abe5;
+.category-circle {
+  z-index: 1;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 47px;
+  height: 47px;
+  background-color: var(--work);
+  border-radius: 50%;
+  border: none;
 }
-.work-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #f6b50f;
-} */
+/* Hover */
+.category-circle:hover {
+  transform: translateY(-1px);
+}
+/* Click */
+.category-circle:active {
+  transform: translateY(1px);
+}
 
+.personal-category-btn:checked ~ .category-selectors {
+  background-color: var(--dark-grey) !important;
+}
+/* #no:checked ~ .switch {
+  background: #eb4f37;
+} */
 /* Color for personal category button */
 .personal-category-btn {
   color: var(--personal);

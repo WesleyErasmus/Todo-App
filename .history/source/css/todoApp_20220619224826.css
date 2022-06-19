@@ -505,6 +505,6 @@ Task title, Task description, Show description button */
 
 /* Strike-through for completed tasks ***NOT WORKING ON TASK DESCRIPTION*** */
 .task-item.completed .task-content input {
-  text-decoration: line-through;
+  text-decoration: line-through !important;
   color: var(--grey);
 }

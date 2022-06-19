@@ -214,6 +214,7 @@ header {
   align-items: center;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  background-color: #005081;
 }
 /* Category labels */
 .category-selectors label {
@@ -224,14 +225,6 @@ header {
   background-color: var(--light-background);
   padding: 0.75rem 2rem;
 }
-
-/* *** WORK IN PROGRESS *** */
-/* .personal-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #00abe5;
-}
-.work-category:checked ~ .category-h4 {
-  border-bottom: 1px solid #f6b50f;
-} */
 
 /* Color for personal category button */
 .personal-category-btn {
