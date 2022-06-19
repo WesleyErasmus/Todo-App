@@ -1,0 +1,23 @@
+# Todo-App
+
+BETA
+## How to use Todo App:
+
+### How to create a task:
+Enter task tile
+Fill in a description
+Select either a personal or a work category
+
+### How to manage tasks:
+You can edit and save tasks with
+Tasks can be deleted
+Tasks with descriptions will display a show discription button
+Tasks are set to display the newest tasks on the top of the list
+
+PLEASE NOTE that this is currently a BETA version of the Todo App. Functionality still to be added include:
+- Form validation
+- Task sorting
+- Strike-through on task descriptions
+- Background color to be changed to category buttons after click
+- Use of media queries to make the App fully responsive
+- A deleted tasks section (with a clear all function)
