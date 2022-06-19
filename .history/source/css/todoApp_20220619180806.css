@@ -452,7 +452,7 @@ Task title, Task description, Show description button */
 .show-hide-description:hover {
   opacity: 0.75;
 }
-/* Click */
+/* Click styling */
 .show-hide-description:active {
   color: #000;
 }

@@ -1,12 +1,14 @@
-/* GOOGLE FONT IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:wght@200&display=swap");
 
-/* *** CSS VARIABLES *** */
+/* CSS VARIABLES */
 :root {
   --light-background: #fff;
   --work: #f6b50f;
   --personal: #2093ff;
+  /* --placeholder-text: #444444bc; */
   --placeholder-text: #aeaeaec7;
+  /* --delete: #ff5e5ee3; */
+  --delete: radial-gradient(circle, rgba(255,155,155,1) 26%, rgba(255,88,88,1) 58%, rgba(255,210,210,1) 61%, rgba(255,67,67,1) 68%);
   --grey: #a9a9a9;
   --dark-grey: #4d4d4d;
 
@@ -27,21 +29,12 @@
     rgba(235, 238, 249, 1) 100%
   );
 
-  --delete: radial-gradient(
-    circle,
-    rgba(255, 155, 155, 1) 26%,
-    rgba(255, 88, 88, 1) 58%,
-    rgba(255, 210, 210, 1) 61%,
-    rgba(255, 67, 67, 1) 68%
-  );
-
   /* BOX-SHADOW */
   --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   /* TEXT-SHADOW */
   --text-shadows: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-/* END OF CSS VARIABLES */
 
 /* UNIVERSAL SELECTOR STYLING */
 * {
@@ -51,9 +44,7 @@
   padding: 0;
   list-style: none;
 }
-/* END OF UNIVERSAL SELECTOR STYLING */
 
-/* RADIO AND CHECKBOX INPUT STYLING */
 /* Below removes input and checkbox default styling */
 input:not([type="radio"]):not([type="checkbox"]),
 button {
@@ -64,13 +55,11 @@ button {
   cursor: initial;
   font-family: "Questrial", sans-serif;
 }
-/* Removes the radio selector */
+
 input[type="radio"] {
   display: none;
 }
-/* END OF RADIO AND CHECKBOX INPUT STYLING */
 
-/* UNIVERSAL PLACEHOLDER TEXT STYLING */
 ::placeholder {
   color: var(--placeholder-text);
   font-style: italic;
@@ -86,7 +75,6 @@ button {
   cursor: pointer;
 }
 
-/* APP WRAPPER/CONTAINER STYLING */
 main {
   background: var(--background);
   background-image: var(--background-color);
@@ -105,48 +93,31 @@ main {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-/* END OF APP WRAPPER/CONTAINER STYLING */
 
-/* Styling for section HTML tags */
 section {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
-/* Makes mouse cursor change to pointer when hovering over all labels */
 label {
   cursor: pointer;
 }
 
-/* HEADER STYLING (Greeting, name, and profile image) */
 header {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0rem 1rem 0rem;
   border-radius: 1rem;
 }
-/* END OF HEADER STYLING */
 
-/* TASK USER INPUTS STYLING */
-#task-list-form {
+#todo-list-form {
   background-color: var(--light-background);
   border-radius: 1rem;
   padding-top: 1.75rem;
   margin: 0;
 }
-/* Container for input fields and the task submit button */
-.create-submit {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 0.5rem;
-}
-/* Title and description input field */
-#title,
-#description {
+
+#title, #description {
   display: block;
   width: 85%;
   font-size: 1rem;
@@ -154,14 +125,13 @@ header {
   padding: 0.9rem 0rem 0.9rem 0rem;
   margin: 10px 0 0 10px;
 }
-/* Hover */
-#title:hover,
-#description:hover {
+
+#title:hover, #description:hover {
   border-radius: 0.5rem;
   background-color: #ececec4e;
   width: 90%;
 }
-/* Add new task submit button */
+
 #add-task-btn {
   z-index: 10;
   position: absolute;
@@ -176,16 +146,15 @@ header {
   border-radius: 9999px;
   transition: all 0s;
 }
-/* Hover */
+
 #add-task-btn:hover {
   opacity: 0.85;
   transform: translateY(-1px);
 }
-/* Click */
+
 #add-task-btn:active {
   transform: translateY(1px);
 }
-/* Div circle container behind the task submit button */
 .circle {
   z-index: -1;
   position: absolute;
@@ -201,19 +170,32 @@ header {
   border: none;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 15px -25px;
 }
-/* Task submit button sizing */
+
+/* ADD TASK BUTTON SIZING */
 .fa-circle-plus {
+  /* Fix sizing! */
+  /* font-size: 2.71rem; */
+  /* font-size: 43.36px; */
   font-size: 45px;
 }
-/* END OF TODO INPUTS AND SUBMIT BTN STYLING */
 
-/* STYLING FOR CATEGORY BUTTONS, PERSONAL AND WORK */
+.create-submit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* STYLING FOR CATEGORIES(WORK / PERSONAL  */
 .category-selectors {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* Category labels */
+
 .category-selectors label {
   display: flex;
   flex-direction: column;
@@ -223,17 +205,27 @@ header {
   padding: 0.75rem 2rem;
 }
 
-/* Color for personal category button */
+.fa-bookmark {
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+
+/* Strike-through for completed tasks ***NOT WORKING*** */
+.task-item.completed .task-content input{
+	text-decoration: line-through;
+	color: var(--grey);
+}
+
 .personal-category-btn {
   color: var(--personal);
   border-bottom-left-radius: 1rem;
 }
-/* Color for work category button */
+
 .work-category-btn {
   color: var(--work);
   border-bottom-right-radius: 1rem;
 }
-/* Category button styling */
+
 .work-category-btn,
 .personal-category-btn {
   font-size: 0.8em;
@@ -244,30 +236,31 @@ header {
   margin-top: 2px;
   transition: all 0s;
 }
-/* Click styling */
+
 label.work-category-btn:active {
-  transform: translateY(1px);
   background-color: #f6b50f3a;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-/* Click styling */
+
 label.personal-category-btn:active {
-  transform: translateY(1px);
   background-color: #2093ff2b;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-/* Hover styling */
+
 .work-category-btn:hover,
 .personal-category-btn:hover {
   opacity: 0.85;
   transform: translateY(-1px);
-  background-color: #ececec4e;
+  background-color: #ececec4e !important;
 }
-/*END OF STYLING FOR CATEGORY BUTTONS */
 
-/* HEADER FOR TASK LIST */
+.work-category-btn:active,
+.personal-category-btn:active {
+  transform: translateY(1px);
+}
+
 #list-header {
   width: 80%;
   display: flex;
@@ -275,34 +268,20 @@ label.personal-category-btn:active {
   margin-bottom: 1rem;
   font-weight: bold;
 }
-/* END HEADER FOR TASK LIST */
 
-/* CONTAINER FOR SEARCH BAR AND SEARCH BUTTONS */
 #search-filter-section {
   display: flex;
   margin-top: 1rem;
 }
-/* Sort buttons */
-#sort-by-date,
-#sort-by-name {
-  color: darkblue;
-}
-/* Hover */
-#sort-by-date:hover,
-#sort-by-name:hover {
-  opacity: 0.75;
-}
-/* Sort buttons margin styling */
 #sort-by-date {
-  margin-right: 5px;
+  /* margin-right: 5px; */
 }
-#sort-by-name {
-  margin-left: 5px;
+/* STYLING FOR SORT BUTTON */
+#sort-by {
+  width: 120px;
 }
-/* END OF SORT BUTTONS */
 
-/* WORK IN PROGRESS */
-/* select {
+select {
   font-family: "Questrial", sans-serif;
   font-size: 15px;
   margin-left: 0.3rem;
@@ -317,7 +296,7 @@ label.personal-category-btn:active {
 option {
   font-family: "Questrial", sans-serif;
   font-size: 12px;
-} */
+}
 /* END OF STYLING FOR SORT BUTTON */
 
 /* SEARCH BAR STYLING */
@@ -328,7 +307,7 @@ option {
   align-items: center;
   width: 47%;
 }
-/* Search bar input field */
+
 #search-bar input {
   display: block;
   width: 100%;
@@ -340,7 +319,7 @@ option {
   margin-bottom: 1rem;
   box-shadow: var(--box-shadow);
 }
-/* Search submit button */
+
 #search-submit-btn {
   position: absolute;
   display: block;
@@ -354,18 +333,17 @@ option {
   padding: 0.53rem;
   color: var(--grey);
 }
-/*END OF SEARCH BAR STYLING */
 
-/* END OF CONTAINER FOR SEARCH BAR AND SEARCH BUTTONS */
-
-/* TASK LIST WHERE NEW TASKS ARE DISPLAYED */
 #task-list {
   border-radius: 0.5rem;
   background-color: var(--light-background);
   box-shadow: var(--box-shadow);
 }
-/* Task item styling (styling for each created task*/
+
 #task-list .task-item {
+  /* display: grid;
+	grid-template-columns: repeat(3, 2fr);
+	grid-gap: 1rem; */
   display: flex;
   justify-content: space-between;
   background-color: var(--light-background);
@@ -374,17 +352,17 @@ option {
   margin: 0 1rem;
   border-bottom: 0.01px solid rgba(229, 225, 225, 0.919);
 }
-/* Hover */
+
 div.task-item:hover {
   border-radius: 0.5rem;
   background-color: #ececec4e !important;
 }
-/* Task title font sizing */
+
 input.task-title {
   font-size: 1.1rem;
   width: 100%;
 }
-/* Task description styling */
+
 p.task-description {
   display: none;
   font-size: 1rem;
@@ -393,79 +371,40 @@ p.task-description {
   /* margin: 5px; */
   width: 90%;
 }
-/*Task content container styling which contains:
-Task title, Task description, Show description button */
 .task-content {
   width: 100%;
   margin-left: 20px;
 }
-/* Task item flex display */
+
 .task-content .task-item {
   flex: 1 1 0%;
 }
-/* Task item styling */
+
 .task-content .task-item .text {
   color: var(--dark-grey);
   width: 100%;
   display: block;
   transition: 0.4s;
 }
-/* END OF TASK LIST STYLING */
 
-/* EDIT & DELETE BUTTON STYLING */
-.edit,
-.delete {
-  position: relative;
-  transition: all 0.1s;
-  cursor: pointer;
-  margin: 0 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-/* Edit & delete button container */
 .edit-delete {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-/* Hover */
-.edit:hover,
-.delete:hover {
-  opacity: 0.75;
-}
-/* Click */
-.edit:active,
-.delete:active,
-.fa-floppy-disk:active {
-  transform: translateY(1px);
-}
-/* END OF EDIT & DELETE BUTTON STYLING */
 
-/* TASK DESCRIPTION SHOW / HIDE STYLING */
-/* Show/hide button styling */
-.show-hide-description {
-  font-size: 1rem;
-  position: relative;
-  color: blue;
-}
-/* Hover */
-.show-hide-description:hover {
-  opacity: 0.75;
-}
-/* Click */
-.show-hide-description:active {
-  color: #000;
-}
-/* END OF TASK DESCRIPTION BUTTON STYLING */
+/* Edit button styling */
 
-/* FONT-AWESOME BUTTON STYLING */
-/* EDIT BUTTON STYLING */
 .fa-pencil {
   /* ADD COLOR */
   font-size: 1.25rem;
   margin: 5px;
   color: var(--grey);
+  /* background-image: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
+
 /* DELETE BUTTON STYLING */
 .fa-trash {
   font-size: 1.25rem;
@@ -481,23 +420,52 @@ Task title, Task description, Show description button */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* SAVE BUTTON STYLING */
+
+.show-hide-description {
+  font-size: 1rem;
+  /* text-decoration: underline; */
+  position: relative;
+  /* margin-left: 5px; */
+  /* CHANGE COLOR */
+  color: blue;
+}
+
+.show-hide-description:hover {
+opacity: 0.75;
+}
+
+.show-hide-description:active {
+  color: #000;
+}
+
+.task-content .edit-delete button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .fa-floppy-disk {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   margin: 5px;
   background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* Category bookmark styling (icon color is styled in .personal-category-btn & .work-category-btn) */
-.fa-bookmark {
-  font-size: 1.2rem;
-  margin-top: 3px;
-}
-/* END OF FONT-AWESOME BUTTON STYLING */
 
-/* Strike-through for completed tasks ***NOT WORKING ON TASK DESCRIPTION*** */
-.task-item.completed .task-content input {
-  text-decoration: line-through;
-  color: var(--grey);
+.edit,
+.delete {
+  position: relative;
+  transition: all 0.1s;
+}
+
+.edit:hover,
+.delete:hover {
+  opacity: 0.75;
+}
+
+.edit:active,
+.delete:active,
+.fa-floppy-disk:active {
+  transform: translateY(1px);
 }

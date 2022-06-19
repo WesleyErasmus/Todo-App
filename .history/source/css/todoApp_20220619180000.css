@@ -267,7 +267,6 @@ label.personal-category-btn:active {
 }
 /*END OF STYLING FOR CATEGORY BUTTONS */
 
-/* HEADER FOR TASK LIST */
 #list-header {
   width: 80%;
   display: flex;
@@ -275,24 +274,24 @@ label.personal-category-btn:active {
   margin-bottom: 1rem;
   font-weight: bold;
 }
-/* END HEADER FOR TASK LIST */
 
 /* CONTAINER FOR SEARCH BAR AND SEARCH BUTTONS */
 #search-filter-section {
   display: flex;
   margin-top: 1rem;
 }
-/* Sort buttons */
+
+/* SORT BUTTONS */
 #sort-by-date,
 #sort-by-name {
   color: darkblue;
 }
-/* Hover */
+
 #sort-by-date:hover,
 #sort-by-name:hover {
   opacity: 0.75;
 }
-/* Sort buttons margin styling */
+
 #sort-by-date {
   margin-right: 5px;
 }
@@ -301,7 +300,6 @@ label.personal-category-btn:active {
 }
 /* END OF SORT BUTTONS */
 
-/* WORK IN PROGRESS */
 /* select {
   font-family: "Questrial", sans-serif;
   font-size: 15px;
@@ -364,6 +362,7 @@ option {
   background-color: var(--light-background);
   box-shadow: var(--box-shadow);
 }
+
 /* Task item styling (styling for each created task*/
 #task-list .task-item {
   display: flex;
@@ -412,51 +411,12 @@ Task title, Task description, Show description button */
 }
 /* END OF TASK LIST STYLING */
 
-/* EDIT & DELETE BUTTON STYLING */
-.edit,
-.delete {
-  position: relative;
-  transition: all 0.1s;
-  cursor: pointer;
-  margin: 0 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
 /* Edit & delete button container */
 .edit-delete {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-/* Hover */
-.edit:hover,
-.delete:hover {
-  opacity: 0.75;
-}
-/* Click */
-.edit:active,
-.delete:active,
-.fa-floppy-disk:active {
-  transform: translateY(1px);
-}
-/* END OF EDIT & DELETE BUTTON STYLING */
-
-/* TASK DESCRIPTION SHOW / HIDE STYLING */
-/* Show/hide button styling */
-.show-hide-description {
-  font-size: 1rem;
-  position: relative;
-  color: blue;
-}
-/* Hover */
-.show-hide-description:hover {
-  opacity: 0.75;
-}
-/* Click */
-.show-hide-description:active {
-  color: #000;
-}
-/* END OF TASK DESCRIPTION BUTTON STYLING */
 
 /* FONT-AWESOME BUTTON STYLING */
 /* EDIT BUTTON STYLING */
@@ -495,6 +455,46 @@ Task title, Task description, Show description button */
   margin-top: 3px;
 }
 /* END OF FONT-AWESOME BUTTON STYLING */
+
+/* TASK DESCRIPTION SHOW / HIDE STYLING */
+/* Show/hide button styling */
+.show-hide-description {
+  font-size: 1rem;
+  position: relative;
+  color: blue;
+}
+/* Hover */
+.show-hide-description:hover {
+  opacity: 0.75;
+}
+/* Click styling */
+.show-hide-description:active {
+  color: #000;
+}
+/* END OF TASK DESCRIPTION BUTTON STYLING */
+
+/* EDIT & DELETE BUTTON STYLING */
+.edit,
+.delete {
+  position: relative;
+  transition: all 0.1s;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+/* Hover */
+.edit:hover,
+.delete:hover {
+  opacity: 0.75;
+}
+/* Click */
+.edit:active,
+.delete:active,
+.fa-floppy-disk:active {
+  transform: translateY(1px);
+}
+/* END OF EDIT & DELETE BUTTON STYLING */
 
 /* Strike-through for completed tasks ***NOT WORKING ON TASK DESCRIPTION*** */
 .task-item.completed .task-content input {
