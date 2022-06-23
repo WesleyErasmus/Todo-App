@@ -1,0 +1,608 @@
+/* GOOGLE FONT IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:wght@200&display=swap");
+
+/* Font family CSS: */
+/* font-family: "Work Sans", sans-serif; */
+/* font-family: "Questrial", sans-serif; */
+
+/* *** CSS VARIABLES *** */
+:root {
+  --light-background: #fff;
+  --work: #f6b50f;
+  --personal: #2093ff;
+  /* --placeholder-text: #aeaeaec7; */
+  --grey: #a9a9a9;
+  --dark-grey: #4d4d4d;
+
+  /* GRADIENT COLORS */
+  --primary-gradient: -webkit-linear-gradient(
+    top,
+    #a7d4ff 0%,
+    #005081 47%,
+    #147bb6 70%,
+    #00abe5 94%,
+    #02a8e4 100%
+  );
+  --background: rgb(206, 217, 255);
+  --background-color: radial-gradient(
+    circle,
+    rgba(206, 217, 255, 1) 0%,
+    rgba(195, 207, 251, 1) 50%,
+    rgba(235, 238, 249, 1) 100%
+  );
+
+  --delete: radial-gradient(
+    circle,
+    rgb(255, 9, 9) 26%,
+    rgba(255, 88, 88, 1) 58%,
+    rgb(255, 0, 0) 61%,
+    rgba(255, 67, 67, 1) 68%
+  );
+
+  /* BOX-SHADOW */
+  --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  /* TEXT-SHADOW */
+  --text-shadows: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* END OF CSS VARIABLES */
+
+/* UNIVERSAL SELECTOR STYLING */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-family: "Questrial", sans-serif;
+}
+/* END OF UNIVERSAL SELECTOR STYLING */
+
+/* RADIO AND CHECKBOX INPUT STYLING */
+/* Below removes input and checkbox default styling */
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: initial;
+  background: none;
+}
+/* Removes the radio selector */
+input[type="radio"] {
+  display: none;
+}
+/* END OF RADIO AND CHECKBOX INPUT STYLING */
+
+/* UNIVERSAL PLACEHOLDER TEXT STYLING */
+::placeholder {
+  /* Style placeholder text here */
+}
+
+/* UNIVERSAL BUTTON STYLING */
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: initial;
+  cursor: pointer;
+}
+
+/* APP WRAPPER/CONTAINER STYLING */
+main {
+  background: var(--background);
+  background-image: var(--background-color);
+  padding-top: 2rem;
+  border-radius: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  flex: 1 1 0%;
+  align-items: center;
+  justify-content: center;
+  max-width: 550px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+/* END OF APP WRAPPER/CONTAINER STYLING */
+
+/* Styling for section HTML tags */
+section {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Makes mouse cursor change to pointer when hovering over all labels */
+label {
+  cursor: pointer;
+}
+
+/* HEADER STYLING (Greeting, name, and profile image) */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0rem 1rem 0rem;
+  border-radius: 1rem;
+}
+
+.app-heading {
+    font-family: "Work Sans", sans-serif;
+}
+/* END OF HEADER STYLING */
+
+/* TASK USER INPUTS STYLING */
+#task-list-form {
+  background-color: var(--light-background);
+  border-radius: 1rem;
+  padding-top: 1.75rem;
+  margin: 0;
+}
+/* Container for input fields and the task submit button */
+.create-submit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+/* Title and description input field */
+#title {
+  background: rgb(246, 248, 255);
+  /* background: #f3f3f3; */
+  display: block;
+  width: 90%;
+  font-size: 14px;
+  text-align: center;
+  border: 0.1px solid #ececec;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom: none;
+  padding: 0.9rem 0rem 0.9rem 0rem;
+}
+#description {
+  /* background-color: #ececec4e; */
+  text-align: center;
+  font-family: "Questrial", sans-serif;
+  display: block;
+  width: 90%;
+  font-size: 14px;
+  padding: 0.9rem;
+  appearance: none;
+  border: 0.1px solid #ececec;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top: none;
+  outline: none;
+  cursor: initial;
+}
+
+#title {margin-top: 10px;}
+/* Hover */
+#title:hover,
+#description:hover {
+  border-radius: 0.5rem;
+  /* background-color: #ececec4e; */
+  background-color: #ececec4e;
+  /* background: rgb(246, 248, 255); */
+  width: 90%;
+}
+/* Add new task submit button */
+#add-task-btn {
+  z-index: 10;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  bottom: -86px;
+  color: #ffffff;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 10px solid #cbd8ff;
+  border-radius: 9999px;
+  transition: all 0s;
+}
+/* Hover */
+#add-task-btn:hover {
+  opacity: 0.75;
+  transform: translateY(-1px);
+}
+/* Click */
+#add-task-btn:active {
+  transform: translateY(1px);
+}
+/* Div circle container behind the task submit button */
+.circle {
+  z-index: -1;
+  position: absolute;
+  bottom: -142px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  background-color: var(--light-background);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 15px -25px;
+}
+/* Task submit button sizing */
+.fa-circle-plus {
+  font-size: 45px;
+}
+/* END OF TODO INPUTS AND SUBMIT BTN STYLING */
+
+/* STYLING FOR CATEGORY BUTTONS, PERSONAL AND WORK */
+.category-selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+/* Category labels */
+.category-selectors label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-background);
+  padding: 0.75rem 2rem;
+}
+.category-h4 {
+  font-family: "Work Sans", sans-serif;
+}
+/* *** WORK IN PROGRESS *** */
+/* .personal-category:checked ~ .category-h4 {
+  border-bottom: 1px solid #00abe5;
+}
+.work-category:checked ~ .category-h4 {
+  border-bottom: 1px solid #f6b50f;
+} */
+
+/* Color for personal category button */
+.personal-category-btn {
+  color: var(--personal);
+  border-bottom-left-radius: 1rem;
+}
+/* Color for work category button */
+.work-category-btn {
+  color: var(--work);
+  border-bottom-right-radius: 1rem;
+}
+/* Category button styling */
+.work-category-btn,
+.personal-category-btn {
+  font-size: 0.8em;
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  margin-top: 2px;
+  transition: all 0s;
+}
+/* Click styling */
+label.work-category-btn:active {
+  transform: translateY(0.5px);
+  background-color: #f6b50f3a;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+/* Click styling */
+label.personal-category-btn:active {
+  transform: translateY(0.5px);
+  background-color: #2093ff2b;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+/* Hover styling */
+.work-category-btn:hover,
+.personal-category-btn:hover {
+  opacity: 0.75;
+  transform: translateY(-1px);
+  background-color: #ececec4e;
+}
+/*END OF STYLING FOR CATEGORY BUTTONS */
+
+/* HEADER FOR TASK LIST */
+#list-header {
+  font-family: "Work Sans", sans-serif;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+/* END HEADER FOR TASK LIST */
+
+/* CONTAINER FOR SEARCH BAR AND SEARCH BUTTONS */
+#search-filter-section {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 3px;
+}
+/* Sort buttons */
+#sort-by-date,
+#sort-by-name {
+  color: #5179b0;
+}
+/* Hover */
+#sort-by-date:hover,
+#sort-by-name:hover {
+  opacity: 0.75;
+}
+/* Sort buttons margin styling */
+#sort-by-date {
+  margin-right: 5px;
+}
+#sort-by-name {
+  margin-left: 5px;
+}
+/* END OF SORT BUTTONS */
+
+/* WORK IN PROGRESS */
+/* select {
+  font-family: "Questrial", sans-serif;
+  font-size: 15px;
+  margin-left: 0.3rem;
+  margin-bottom: 15px;
+  padding: 0.4rem;
+  border: none;
+  outline: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+option {
+  font-family: "Questrial", sans-serif;
+  font-size: 12px;
+} */
+/* END OF STYLING FOR SORT BUTTON */
+
+/* SEARCH BAR STYLING */
+#search-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47%;
+}
+/* Search bar input field */
+#search-bar input {
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.5rem;
+  padding-right: 0rem;
+  background-color: var(--light-background);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+}
+/* Search submit button */
+#search-submit-btn {
+  position: absolute;
+  display: block;
+  right: 0rem;
+  top: 0;
+  background-color: var(--light-background);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 0.53rem;
+  color: var(--grey);
+}
+/*END OF SEARCH BAR STYLING */
+
+/* END OF CONTAINER FOR SEARCH BAR AND SEARCH BUTTONS */
+
+/* TASK LIST WHERE NEW TASKS ARE DISPLAYED */
+#task-list {
+  border-radius: 1rem;
+  background: rgb(246, 248, 255);
+  /* background-color: var(--light-background); */
+  box-shadow: var(--box-shadow);
+}
+/* Task item styling (styling for each created task*/
+#task-list .task-item {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: var(--light-background); */
+  /* background: rgb(246, 248, 255); */
+  padding: 1.2rem 1rem;
+  margin-bottom: 0rem;
+  margin: 0 1rem;
+  border-bottom: 0.01px solid rgba(229, 225, 225, 0.919);
+}
+/* Hover */
+div.task-item:hover {
+  border-radius: 0.5rem;
+  background-color: #ececec4e !important;
+}
+/* Task title font sizing */
+input.task-title {
+  color: #141823;
+  font-weight: 540;
+  /* font-weight: bold; */
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 7px;
+}
+/* Task description styling */
+p.task-description {
+  display: none;
+  font-size: 14px;
+  /* background: rgb(246, 248, 255); */
+  /* background-color: #ececec4e; */
+  padding: 10px 15px 5px;
+  border-radius: 7px;
+  margin-bottom: 3px;
+  color: #373D3F;
+  line-height: 1.1;
+  
+}
+/*Task content container styling which contains:
+Task title, Task description, Show description button */
+.task-content {
+  width: 100%;
+  margin-left: 20px;
+}
+/* Task item flex display */
+.task-content .task-item {
+  flex: 1 1 0%;
+}
+/* Task item styling */
+.task-content .task-item .text {
+  color: var(--dark-grey);
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+/* END OF TASK LIST STYLING */
+
+/* EDIT & DELETE BUTTON STYLING */
+.edit,
+.delete {
+  position: relative;
+  right: -10px;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+/* Edit & delete button container */
+.edit-delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+/* Hover */
+.edit:hover,
+.delete:hover {
+  opacity: 0.75;
+}
+/* Click */
+.edit:active,
+.delete:active,
+.fa-floppy-disk:active {
+  transform: translateY(1px);
+}
+/* END OF EDIT & DELETE BUTTON STYLING */
+
+/* TASK DESCRIPTION SHOW / HIDE STYLING */
+/* Show/hide button styling */
+.show-hide-description {
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  position: relative;
+  color: #5179b0;
+}
+/* Hover */
+.show-hide-description:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+/* Click */
+.show-hide-description:active {
+  color: var(--dark-grey);
+}
+/* END OF TASK DESCRIPTION BUTTON STYLING */
+
+/* FONT-AWESOME BUTTON STYLING */
+/* EDIT BUTTON STYLING */
+.fa-pencil {
+  font-size: 1.1rem;
+  margin: 5px;
+  background: rgb(100,134,255);
+  background: linear-gradient(90deg, rgb(38, 85, 255) 21%, rgb(75, 114, 255) 39%, rgb(107, 137, 255) 62%, rgb(35, 83, 255) 86%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* DELETE BUTTON STYLING */
+.fa-trash {
+  font-size: 1.1rem;
+  margin: 5px;
+  background: var(--delete);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* SAVE BUTTON STYLING */
+.fa-floppy-disk {
+  font-size: 1.1rem;
+  margin: 5px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Category bookmark styling (icon color is styled in .personal-category-btn & .work-category-btn) */
+.fa-bookmark {
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+/* END OF FONT-AWESOME BUTTON STYLING */
+
+/* Strike-through for completed tasks ***NOT WORKING ON TASK DESCRIPTION*** */
+.task-item.completed .task-content input {
+  text-decoration: line-through;
+  color: var(--grey);
+}
+
+
+
+.datepicker-toggle {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  top: -20px;
+}
+
+.datepicker-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.datepicker-toggle:hover + .hover-message {
+  display: block;
+}
+
+.datepicker-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hover-message {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: none;
+  font-size: 0.85rem;
+  color: var(--work);
+}
+
+.fa-calendar-days {
+  font-size: 22px;
+}
+
+.task-due-date {
+  font-size: 0.85rem;
+  color: var(--grey);
+}
