@@ -97,7 +97,6 @@ function printTasksToDOM() {
     }
 
     // Adding classes to created HTML elements
-    taskLabel.classList.add("task-item-label")
     taskContent.classList.add("task-content");
     editDeleteContainer.classList.add("edit-delete");
     editButton.classList.add("edit");
@@ -178,8 +177,6 @@ function printTasksToDOM() {
       taskInput.removeAttribute("readonly");
       // focus() shows that the text is now editable
       taskInput.focus();
-      // Changes text color when readonly has been removed
-      taskInput.style.color = "#5179b0";
       // addeventlistener 'blur' will stop editing when clicking outside of input field
       taskInput.addEventListener("blur", (e) => {
         taskInput.setAttribute("readonly", true);

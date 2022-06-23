@@ -430,8 +430,9 @@ div.task-item:hover {
 }
 /* Task title font sizing */
 input.task-title {
-  color: #141823;
-  /* color: #5179b0; */
+  /* padding: 10px; */
+  border-radius: 0.5rem;
+  /* color: #141823; */
   font-weight: 540;
   font-size: 15px;
   width: 100%;
@@ -676,6 +677,6 @@ Task title, Task description, Show description button */
 [contenteditable="true"]:focus{
   outline:none;
   padding: 10px;
-  color: #5179b0;
+  background: #f2f2f2ea;
   border-radius: 0.5rem;
 }

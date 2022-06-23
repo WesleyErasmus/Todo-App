@@ -97,7 +97,6 @@ function printTasksToDOM() {
     }
 
     // Adding classes to created HTML elements
-    taskLabel.classList.add("task-item-label")
     taskContent.classList.add("task-content");
     editDeleteContainer.classList.add("edit-delete");
     editButton.classList.add("edit");
@@ -112,12 +111,9 @@ function printTasksToDOM() {
     taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;
     taskContent.innerHTML = `<input type="text" class="task-title" value="${task.title}" readonly>`;
     taskDescription.innerHTML = `${task.description}`;
-    // NEW*******************8
-    taskDescription.setAttribute("contenteditable", true)
-
     showDescription.innerHTML = "Read description";
     dueDate.innerHTML = `${task.date}`;
-    
+
     // Child elements nested within task-item div
     taskItem.appendChild(taskLabel);
     taskItem.appendChild(taskContent);
@@ -132,7 +128,6 @@ function printTasksToDOM() {
     // Edit, Delete, show description buttons nested in edit-delete container
     editDeleteContainer.appendChild(editButton);
     editDeleteContainer.appendChild(deleteButton);
-
     // Below code appends each task item to the task-list class
     taskList.appendChild(taskItem);
 
@@ -178,8 +173,6 @@ function printTasksToDOM() {
       taskInput.removeAttribute("readonly");
       // focus() shows that the text is now editable
       taskInput.focus();
-      // Changes text color when readonly has been removed
-      taskInput.style.color = "#5179b0";
       // addeventlistener 'blur' will stop editing when clicking outside of input field
       taskInput.addEventListener("blur", (e) => {
         taskInput.setAttribute("readonly", true);

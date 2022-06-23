@@ -676,6 +676,6 @@ Task title, Task description, Show description button */
 [contenteditable="true"]:focus{
   outline:none;
   padding: 10px;
-  color: #5179b0;
+  background: #f2f2f2ea;
   border-radius: 0.5rem;
 }

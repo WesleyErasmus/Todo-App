@@ -81,7 +81,7 @@ function printTasksToDOM() {
     // <button class="show-hide-description">
     const showDescription = document.createElement("button");
     // <p class="task-description">
-    const taskDescription = document.createElement("p");
+    const taskDescription = document.createElement("label");
     const dueDate = document.createElement("div");
 
     taskInput.type = "checkbox";
@@ -97,13 +97,12 @@ function printTasksToDOM() {
     }
 
     // Adding classes to created HTML elements
-    taskLabel.classList.add("task-item-label")
     taskContent.classList.add("task-content");
     editDeleteContainer.classList.add("edit-delete");
     editButton.classList.add("edit");
     deleteButton.classList.add("delete");
     showDescription.classList.add("show-hide-description");
-    taskDescription.classList.add("task-description");
+    taskDescription.classList.add("task-description", "readonly");
     dueDate.classList.add("task-due-date");
 
     // Adding content to created HTML elements
@@ -112,9 +111,6 @@ function printTasksToDOM() {
     taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;
     taskContent.innerHTML = `<input type="text" class="task-title" value="${task.title}" readonly>`;
     taskDescription.innerHTML = `${task.description}`;
-    // NEW*******************8
-    taskDescription.setAttribute("contenteditable", true)
-
     showDescription.innerHTML = "Read description";
     dueDate.innerHTML = `${task.date}`;
     
@@ -178,8 +174,6 @@ function printTasksToDOM() {
       taskInput.removeAttribute("readonly");
       // focus() shows that the text is now editable
       taskInput.focus();
-      // Changes text color when readonly has been removed
-      taskInput.style.color = "#5179b0";
       // addeventlistener 'blur' will stop editing when clicking outside of input field
       taskInput.addEventListener("blur", (e) => {
         taskInput.setAttribute("readonly", true);

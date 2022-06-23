@@ -247,7 +247,6 @@ header {
 .category-selectors {
   width: 90%;
   display: flex;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
   border-bottom-left-radius: 1rem;
@@ -261,15 +260,17 @@ header {
   align-items: center;
   background-color: var(--light-background);
   padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
 }
 .category-h4 {
   font-family: "Work Sans", sans-serif;
 }
-/* Label in task-items */
-.task-item-label {
-  height: 30px;
+/* *** WORK IN PROGRESS *** */
+/* .personal-category:checked ~ .category-h4 {
+  border-bottom: 1px solid #00abe5;
 }
+.work-category:checked ~ .category-h4 {
+  border-bottom: 1px solid #f6b50f;
+} */
 
 /* Color for personal category button */
 .personal-category-btn {
@@ -431,7 +432,6 @@ div.task-item:hover {
 /* Task title font sizing */
 input.task-title {
   color: #141823;
-  /* color: #5179b0; */
   font-weight: 540;
   font-size: 15px;
   width: 100%;
@@ -471,7 +471,7 @@ Task title, Task description, Show description button */
 .delete {
   position: relative;
   right: -10px;
-  top: -7px;
+  top: -4px;
   transition: all 0.1s;
   cursor: pointer;
   font-size: 0.8rem;
@@ -615,7 +615,7 @@ Task title, Task description, Show description button */
   box-shadow: var(--box-shadow);
   /* Tooltip fade effect */
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 1s;
 }
 
 /* Tooltip styling */
@@ -667,15 +667,4 @@ Task title, Task description, Show description button */
   border-width: 8px;
   border-style: solid;
   border-color: #d6e0ff transparent transparent transparent;
-}
-[contenteditable="true"] {
-  width: 112%;
-}
-/* Attribute that makes task item description editable */
-[contenteditable="true"]:active,
-[contenteditable="true"]:focus{
-  outline:none;
-  padding: 10px;
-  color: #5179b0;
-  border-radius: 0.5rem;
 }
