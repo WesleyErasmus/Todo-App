@@ -241,9 +241,9 @@ function dateSort() {
 }
 // Sort alphabetically using onclick
 function nameSort() {
-  const sortedByTitle = tasks.sort((a, b) => b.title - a.title)
+  const sortedByTitle = tasks.sort((a, b) => a.title - b.title)
   console.log(sortedByTitle);
-  // document.getElementById("task-list").innerHTML += sortedByTitle;
+  document.getElementById("task-list").innerHTML += sortedByTitle;
 }
   
 // const sortedTasks = task.sort((a, b) => b.date - a.date)

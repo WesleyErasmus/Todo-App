@@ -51,6 +51,11 @@ window.addEventListener("load", () => {
   printTasksToDOM();
 });
 
+function dateSort() {
+  const sortedTasks = tasks.sort((a, b) => a.createdAt - b.createdAt)
+  console.log(sortedTasks);
+  return sortedTasks;
+}
 
 function printTasksToDOM() {
   const taskList = document.querySelector("#task-list");
@@ -82,7 +87,7 @@ function printTasksToDOM() {
     // <button class="show-hide-description">
     const showDescription = document.createElement("button");
     // <p class="task-description">
-    const taskDescription = document.createElement("div");
+    const taskDescription = document.createElement("p");
     const dueDate = document.createElement("div");
 
     taskInput.type = "checkbox";
@@ -113,8 +118,8 @@ function printTasksToDOM() {
     taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;
     taskContent.innerHTML = `<input type="text" class="task-title" value="${task.title}" readonly>`;
     taskDescription.innerHTML = `${task.description}`;
-    // NEW*******************
-    // taskDescription.setAttribute("contenteditable", true)
+    // NEW*******************8
+    taskDescription.setAttribute("contenteditable", true)
 
     showDescription.innerHTML = "Read description";
     dueDate.innerHTML = `${task.date}`;
@@ -217,7 +222,6 @@ function printTasksToDOM() {
       printTasksToDOM();
     });
     
-
     // SORT BY ALPHABET & DATE ***WORK IN PROGRESS***
     // Sort alphabetically
     // const nameSort = document.getElementById("sort-by-name");
@@ -227,25 +231,18 @@ function printTasksToDOM() {
     // console.log(tasks)
     // })
     // const dateSort = document.getElementById("sort-by-time");
-    
-
+    // dateSort.addEventListener("click", (e) => { 
+    //   tasks.sort((a, b) => a.createdAt - b.createdAt)
+    //   localStorage.setItem("tasks", JSON.stringify(tasks));
+    //   printTasksToDOM();
+    // });
 
   });
-  
+  //   function dateSort() {
+  //   const sortedTasks = tasks.sort((a, b) => a.createdAt - b.createdAt)
+  //   console.log(sortedTasks);
+  // }
 }
-// Sort by date function using onclick
-function dateSort() {
-  const sortedByDate = tasks.sort((a, b) => a.createdAt - b.createdAt)
-  console.log(sortedByDate);
-  document.getElementById("task-list").innerHTML += sortedByDate;
-}
-// Sort alphabetically using onclick
-function nameSort() {
-  const sortedByTitle = tasks.sort((a, b) => b.title - a.title)
-  console.log(sortedByTitle);
-  // document.getElementById("task-list").innerHTML += sortedByTitle;
-}
-  
 // const sortedTasks = task.sort((a, b) => b.date - a.date)
 // Slice protects the original array
 // const sortedTasks = task.slice().sort((a, b) => b.date - a.date)

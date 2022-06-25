@@ -233,17 +233,15 @@ function printTasksToDOM() {
   });
   
 }
-// Sort by date function using onclick
+
 function dateSort() {
-  const sortedByDate = tasks.sort((a, b) => a.createdAt - b.createdAt)
-  console.log(sortedByDate);
-  document.getElementById("task-list").innerHTML += sortedByDate;
-}
-// Sort alphabetically using onclick
-function nameSort() {
-  const sortedByTitle = tasks.sort((a, b) => b.title - a.title)
-  console.log(sortedByTitle);
-  // document.getElementById("task-list").innerHTML += sortedByTitle;
+  const sortedTasks = tasks.sort((a, b) => a.createdAt - b.createdAt)
+
+  console.log(sortedTasks);
+
+  return tasks.reverse();
+  // document.getElementById("task-list").innerHTML = taskList;
+
 }
   
 // const sortedTasks = task.sort((a, b) => b.date - a.date)
@@ -258,3 +256,4 @@ function nameSort() {
 // tasks.sort((a,b) => new Date(b.date) - new Date(a.date));
 
 // tasks.sort((a,b)=>a.getTime()-b.getTime());
+console.log(taskList)

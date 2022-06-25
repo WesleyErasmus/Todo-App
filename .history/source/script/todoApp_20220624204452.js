@@ -51,7 +51,6 @@ window.addEventListener("load", () => {
   printTasksToDOM();
 });
 
-
 function printTasksToDOM() {
   const taskList = document.querySelector("#task-list");
   // Below clears each element after creating a tasks
@@ -227,25 +226,29 @@ function printTasksToDOM() {
     // console.log(tasks)
     // })
     // const dateSort = document.getElementById("sort-by-time");
-    
-
+    // dateSort.addEventListener("click", (e) => { 
+    //   tasks.sort((a, b) => a.createdAt - b.createdAt)
+    //   localStorage.setItem("tasks", JSON.stringify(tasks));
+    //   printTasksToDOM();
+    // });
 
   });
-  
+  //   function dateSort() {
+  //   const sortedTasks = tasks.sort((a, b) => a.createdAt - b.createdAt)
+  //   console.log(sortedTasks);
+  // }
+  console.log(taskList);
 }
-// Sort by date function using onclick
-function dateSort() {
-  const sortedByDate = tasks.sort((a, b) => a.createdAt - b.createdAt)
-  console.log(sortedByDate);
-  document.getElementById("task-list").innerHTML += sortedByDate;
-}
-// Sort alphabetically using onclick
-function nameSort() {
-  const sortedByTitle = tasks.sort((a, b) => b.title - a.title)
-  console.log(sortedByTitle);
-  // document.getElementById("task-list").innerHTML += sortedByTitle;
-}
-  
+
+
+  function dateSort() {
+    const sortedTasks = tasks.sort((a, b) => a.createdAt - b.createdAt)    
+
+    console.log(sortedTasks);
+
+    return taskList;
+
+  }
 // const sortedTasks = task.sort((a, b) => b.date - a.date)
 // Slice protects the original array
 // const sortedTasks = task.slice().sort((a, b) => b.date - a.date)

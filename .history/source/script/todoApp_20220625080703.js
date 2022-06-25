@@ -231,20 +231,19 @@ function printTasksToDOM() {
 
 
   });
+
+  function dateSort() {
+    const sortedTasks = tasks.sort((a, b) => a.createdAt - b.createdAt)    
+
+    console.log(sortedTasks);
+
+    // return sortedTasks;
+    document.getElementById("task-list").innerHTML = sortedTasks;
+
+  }
   
 }
-// Sort by date function using onclick
-function dateSort() {
-  const sortedByDate = tasks.sort((a, b) => a.createdAt - b.createdAt)
-  console.log(sortedByDate);
-  document.getElementById("task-list").innerHTML += sortedByDate;
-}
-// Sort alphabetically using onclick
-function nameSort() {
-  const sortedByTitle = tasks.sort((a, b) => b.title - a.title)
-  console.log(sortedByTitle);
-  // document.getElementById("task-list").innerHTML += sortedByTitle;
-}
+
   
 // const sortedTasks = task.sort((a, b) => b.date - a.date)
 // Slice protects the original array
