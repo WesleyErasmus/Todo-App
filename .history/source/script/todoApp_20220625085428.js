@@ -113,6 +113,8 @@ function printTasksToDOM() {
     taskCategory.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;
     taskContent.innerHTML = `<input type="text" class="task-title" value="${task.title}" readonly>`;
     taskDescription.innerHTML = `${task.description}`;
+    // NEW*******************
+    // taskDescription.setAttribute("contenteditable", true)
 
     showDescription.innerHTML = "Read description";
     dueDate.innerHTML = `${task.date}`;
@@ -229,7 +231,6 @@ function dateSort() {
   document.getElementById("task-list").innerHTML = sortedByDate;
 }
   
-// *** SORTING METHODS ***
 // const sortedTasks = task.sort((a, b) => b.date - a.date)
 // Slice protects the original array
 // const sortedTasks = task.slice().sort((a, b) => b.date - a.date)

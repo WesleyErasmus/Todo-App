@@ -799,30 +799,100 @@ header {
 
 /* Container for input fields and the task submit button */
 .create-submit {
-  margin-top: 0.2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 /* Title and description input field */
 #title {
   background: rgb(246, 248, 255);
-  width: 95%;
-  font-size: 13px;
-  padding: 0.7rem 0rem 0.7rem 0rem;
+  display: block;
+  width: 90%;
+  font-size: 14px;
+  text-align: center;
+  border: 0.1px solid #ececec;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom: none;
+  padding: 0.9rem 0rem 0.9rem 0rem;
+  margin-top: 15px;
 }
 /* TASK TITLE ERROR MESSAGE IF TITLE IS BLACK / FORM VALIDATION */
 /* Error message tooltip styling */
 .error-validation-message {
-  right: 100px;
+  visibility: hidden;
+  position: absolute;
+  width: 250px;
+  height: 40px;
+  right: 180px;
+  top: -40px;
+  font-size: 0.85rem;
+  background-color: #f7f9ff;
+  color: var(--dark-grey);
+  text-align: center;
+  padding: 13px 0;
+  border-radius: 7px;
+  z-index: 1;
+  box-shadow: var(--box-shadow);
+  transition: all 1s;
+  /* Tooltip fade effect */
+  -webkit-animation: fadeinout 8s linear forwards;
+  animation: fadeinout 8s linear forwards;
 }
+/* Keyframes for error message fade out */
+@keyframes fadeinout {
+  100% { opacity: 0; }
+  75% { opacity: 1; }
+  50% { opacity: 1; }
+  0% { opacity: 1; }
+  }
+@-webkit-keyframes fadeinout {
+100% { opacity: 0; }
+75% { opacity: 1; }
+50% { opacity: 1; }
+0% { opacity: 1; }
+}
+/*Error message tooltip arrow styling */
+.error-validation-message::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 65%;
+  margin-left: -5px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #d6e0ff transparent transparent transparent;
+}
+/* END OF ERROR MESSAGE STYLING */
 #description {
-  width: 95%;
-  font-size: 13px;
-  padding: 0.7rem;
+  /* background-color: #ececec4e; */
+  text-align: center;
+  font-family: "Questrial", sans-serif;
+  display: block;
+  width: 90%;
+  font-size: 14px;
+  padding: 0.9rem;
+  appearance: none;
+  border: 0.1px solid #ececec;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top: none;
+  outline: none;
+  cursor: initial;
 }
 
 /* Hover */
 #title:hover,
 #description:hover {
-  width: 95%;
+  border-radius: 0.5rem;
+  /* background-color: #ececec4e; */
+  background-color: #ececec4e;
+  /* background: rgb(246, 248, 255); */
+  width: 90%;
 }
 /* Add new task submit button */
 #add-task-btn {

@@ -814,15 +814,29 @@ header {
   right: 100px;
 }
 #description {
+  text-align: center;
+  font-family: "Questrial", sans-serif;
+  display: block;
   width: 95%;
-  font-size: 13px;
-  padding: 0.7rem;
+  font-size: 14px;
+  padding: 0.9rem;
+  appearance: none;
+  border: 0.1px solid #ececec;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top: none;
+  outline: none;
+  cursor: initial;
 }
 
 /* Hover */
 #title:hover,
 #description:hover {
-  width: 95%;
+  border-radius: 0.5rem;
+  /* background-color: #ececec4e; */
+  background-color: #ececec4e;
+  /* background: rgb(246, 248, 255); */
+  width: 90%;
 }
 /* Add new task submit button */
 #add-task-btn {

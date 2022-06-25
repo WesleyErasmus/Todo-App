@@ -822,6 +822,10 @@ header {
 /* Hover */
 #title:hover,
 #description:hover {
+  border-radius: 0.5rem;
+  /* background-color: #ececec4e; */
+  background-color: #ececec4e;
+  /* background: rgb(246, 248, 255); */
   width: 95%;
 }
 /* Add new task submit button */
