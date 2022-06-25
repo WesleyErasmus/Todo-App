@@ -1,5 +1,16 @@
 /* GOOGLE FONT IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:wght@200&display=swap");
+
+/* MEDIA QUERIES */
+/* Mobile screen */
+/* @media only screen and (max-width: 400px) {} */
+/* Tablet screen */
+/* @media only screen and (min-width: 768px) {} */
+/* Desktop screen */
+/* @media only screen and (min-width: 992px) {} */
+
+
+
 /* Imported Font families: */
 /* font-family: "Work Sans", sans-serif; */
 /* font-family: "Questrial", sans-serif; */
@@ -542,6 +553,7 @@ div.task-item:hover {
 /* Task title font sizing */
 input.task-title {
   color: #141823;
+  /* color: #5179b0; */
   font-weight: 540;
   font-size: 15px;
   width: 100%;

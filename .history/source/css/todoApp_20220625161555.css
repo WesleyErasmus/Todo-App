@@ -1,5 +1,16 @@
 /* GOOGLE FONT IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:wght@200&display=swap");
+
+/* MEDIA QUERIES */
+/* Mobile screen */
+/* @media only screen and (max-width: 400px) {} */
+/* Tablet screen */
+/* @media only screen and (min-width: 768px) {} */
+/* Desktop screen */
+/* @media only screen and (min-width: 992px) {} */
+
+
+
 /* Imported Font families: */
 /* font-family: "Work Sans", sans-serif; */
 /* font-family: "Questrial", sans-serif; */

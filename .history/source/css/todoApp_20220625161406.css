@@ -1,5 +1,16 @@
 /* GOOGLE FONT IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:wght@200&display=swap");
+
+/* MEDIA QUERIES */
+/* Mobile screen */
+/* @media only screen and (max-width: 400px) {} */
+/* Tablet screen */
+/* @media only screen and (min-width: 768px) {} */
+/* Desktop screen */
+/* @media only screen and (min-width: 992px) {} */
+
+
+
 /* Imported Font families: */
 /* font-family: "Work Sans", sans-serif; */
 /* font-family: "Questrial", sans-serif; */
@@ -542,6 +553,7 @@ div.task-item:hover {
 /* Task title font sizing */
 input.task-title {
   color: #141823;
+  /* color: #5179b0; */
   font-weight: 540;
   font-size: 15px;
   width: 100%;
@@ -556,6 +568,7 @@ input.task-title {
 div.task-description {
   display: none;
   max-height: 150px;
+  /* >>>>>>>>>> STYLE SCROLL BAR <<<<<<<<<<<< */
   overflow: auto;
   font-size: 14px;
   padding: 6px 3px 5px;
@@ -678,7 +691,7 @@ Task title, Task description, Show description button */
     background: var(--background);
     background-image: var(--background-color);
   }
-/* App container styling */
+
   main {
     background-image: none;
     background: none;
@@ -691,10 +704,13 @@ Task title, Task description, Show description button */
     height: auto;
     margin-top: 20px;
   }
-/* App header padding */
+  
+  /* END OF APP WRAPPER/CONTAINER STYLING */
+
 header {
   padding: 0.5rem;
 }
+
 /* TASK USER INPUTS STYLING */
 #task-list-form {
   background-color: var(--light-background);
