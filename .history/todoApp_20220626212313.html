@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <script src="https://kit.fontawesome.com/81ea498f91.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/todoApp.css">
+    <script src="/script/todoApp.js" defer></script>
+</head>
+
+<body>
+    <!-- App wrapper -->
+    <main class="app-wrapper">
+        <!-- App header -->
+        <header>
+            <!-- Greeting and Name -->
+            <div class="app-heading">
+                <h2>Your Todo list, </h2>
+                <!-- Enter username input -->
+                <input type="text" id="name" placeholder="Enter your name here" />
+            </div>
+
+            <!-- App logo icon -->
+            <!-- <i class="fa-solid fa-circle-notch"></i> -->
+
+            <!-- <i class="fa-brands fa-connectdevelop"></i> -->
+
+            <!-- <i class="fa-solid fa-clipboard-check"></i> -->
+
+            <i class="fa-solid fa-cubes"></i>
+
+
+        </header>
+
+        <!-- Categories section -->
+        <section>
+            <form id="task-list-form">
+                <div class="create-submit">
+                    <span class="error-validation-message">Please enter a task title</span>
+                    <!-- Task title input -->
+                    <input type="text" name="title" id="title" placeholder="Create a new task name..." />
+                    <!-- task description textarea -->
+                    <textarea name="description" id="description" cols="30" rows="3" placeholder="Add task description (optional)..."></textarea>
+                    
+                    <!-- Due date icon arrow pointer -->
+                    <i class="fa-solid fa-angles-right"></i>
+                    <!-- Due date calendar icon -->
+                    <span class="datePicker-toggle">
+                        <span class="datePicker-toggle-button"></span>
+                        <input type="date" name="date"
+                        id="date" class="datePicker-input" min="2022-06-25">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+
+                    <!-- Calendar tooltip message -->
+                    <span class="calendar-tooltip">
+                        Please select a due date
+                    </span>
+                    
+                    <!-- task submit button -->
+                    <button id="add-task-btn" type="submit" value="create-new-task">
+                        <!-- add task button -->
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </button>
+                    <div class="circle"></div>
+                </div>
+
+                <!-- Categories -->
+                <div class="category-selectors">
+                    <!-- Personal category -->
+                    <label class="personal-category-btn">
+                        <input type="radio" name="category" value="Personal" class="personal-category"
+                            id="personal-category" checked />
+                        <i class="fa-solid fa-bookmark"></i>
+                        <h4 class="category-h4">Personal</h4>
+                    </label>
+                    <!-- Work category -->
+                    <label class="work-category-btn">
+                        <input type="radio" name="category" value="Work" class="work-category" id="work-category" />
+                        <i class="fa-solid fa-bookmark"></i>
+                        <h4 class="category-h4">Work</h4>
+                    </label>
+                </div>
+                <!-- End of categories div -->
+                </div>
+            </form>
+        </section>
+
+        <!-- Task list is created here, new tasks are outputted below -->
+        <section class="todo-list-output">
+            <div id="list-header">
+                <div>Your task list</div>
+            </div>
+            <!-- SORT / FILTER SECTION -->
+            <div id="search-filter-section">
+                <!-- Sort by date button -->
+                <button id="sort-by-date" value="date" onclick="dateSort()">Sort by date</button>
+                <p>|</p>
+                <!-- Sort by name button -->
+                <button id="sort-by-name" value="name" onclick="nameSort()">Sort by name</button>
+            </div>
+            <!-- Actual task list output -->
+            <div class="task-list" id="task-list">
+                <!-- Task items get added in this container -->
+            </div>
+            <div class="task-count"></div>
+            <!-- End of task list -->
+            <button class="deleteAll" >Delete all tasks</button>
+        </section>
+    </main> <!-- End of App wrapper -->
+
+</body>
+
+</html>
