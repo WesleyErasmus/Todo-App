@@ -452,7 +452,9 @@ label.personal-category-btn:active {
 #list-header {
   font-family: "Work Sans", sans-serif;
   width: 99%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 0; */
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -477,6 +479,7 @@ label.personal-category-btn:active {
 /* Sort buttons */
 #sort-by-date,
 #sort-by-name {
+  /* display: flex; */
   color: #5179b0;
 }
 
@@ -902,11 +905,6 @@ Task title, Task description, Show description button */
     max-width: 100vw;
     width: 100% !important;
     margin-top: 0;
-  }
-
-  /* Arrow icon next to calendar datePicker */
-  .fa-angles-right {
-    right: 65px;
   }
 
   /* TASK USER INPUTS STYLING */

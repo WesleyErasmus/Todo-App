@@ -904,11 +904,6 @@ Task title, Task description, Show description button */
     margin-top: 0;
   }
 
-  /* Arrow icon next to calendar datePicker */
-  .fa-angles-right {
-    right: 65px;
-  }
-
   /* TASK USER INPUTS STYLING */
   #task-list-form {
     padding-top: 1.75rem;

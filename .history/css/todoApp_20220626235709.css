@@ -451,8 +451,10 @@ label.personal-category-btn:active {
 /* HEADER FOR TASK LIST */
 #list-header {
   font-family: "Work Sans", sans-serif;
-  width: 99%;
-  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -460,17 +462,14 @@ label.personal-category-btn:active {
 
 /* CONTAINER FOR SORT BUTTONS */
 #search-filter-section {
-  width: 99%;
-  position: relative;
   display: flex;
-  margin: 0 auto;
   margin-bottom: 3px;
-  margin-top: 10px;
 }
 
 .delete-all {
-  position: absolute;
-  right: 0px;
+  position: relative;
+  float: right;
+  top: -18px;
   color: rgba(255, 88, 88, 1);
 }
 
@@ -902,11 +901,6 @@ Task title, Task description, Show description button */
     max-width: 100vw;
     width: 100% !important;
     margin-top: 0;
-  }
-
-  /* Arrow icon next to calendar datePicker */
-  .fa-angles-right {
-    right: 65px;
   }
 
   /* TASK USER INPUTS STYLING */
