@@ -329,11 +329,18 @@ function nameSort() {
 
 function deleteAll() {
 	// const clearAll = document.querySelector(".delete-all")
+  const nameChange = document.querySelector("#name");
+  const username = localStorage.getItem("username") || "";
+  nameChange.value = username;
+
+  // Change event listener which saves user name
+  nameChange.addEventListener("change", (e) => {
+    localStorage.setItem("username", e.target.value);
+  });
 
 if (localStorage.length > 0 ) {
-  // removes all data from the tasks key (array)
-  localStorage.removeItem('tasks')
+  localStorage.removeItem(tasks);
+    localStorage.setItem("username", [])
 } 
-// Reload page after storage clear
 location.reload();
 }

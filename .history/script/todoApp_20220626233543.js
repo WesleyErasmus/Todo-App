@@ -331,8 +331,8 @@ function deleteAll() {
 	// const clearAll = document.querySelector(".delete-all")
 
 if (localStorage.length > 0 ) {
-  // removes all data from the tasks key (array)
-  localStorage.removeItem('tasks')
+  // removes all data from local storage
+  localStorage.clear();
 } 
 // Reload page after storage clear
 location.reload();

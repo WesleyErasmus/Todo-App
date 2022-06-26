@@ -219,20 +219,24 @@ header {
   text-align: center;
   padding: 10px 0;
   border-radius: 7px;
+  /* z-index: 1; */
   box-shadow: var(--box-shadow);
+  /* Tooltip fade effect */
+  -webkit-animation: fadeinout 6s linear forwards;
+  animation: fadeinout 6s linear forwards;
 }
 
 /* Tooltip styling - adds tooltip arrow */
-.calendar-tooltip::after {
+/* .calendar-tooltip::after {
   content: "";
   position: absolute;
   top: 100%;
   left: 85%;
   margin-left: -5px;
-  border-width: 8px;
+  border-width: 7px;
   border-style: solid;
   border-color: #d6e0ff transparent transparent transparent;
-}
+} */
 /* END OF DUE DATE CALENDAR STYLING */
 
 /* Container for input fields and the task submit button */
@@ -278,6 +282,39 @@ header {
   border-radius: 7px;
   z-index: 1;
   box-shadow: var(--box-shadow);
+  /* Tooltip fade effect */
+  -webkit-animation: fadeinout 5s linear forwards;
+  animation: fadeinout 5s linear forwards;
+}
+
+/* Keyframes for error message fade out */
+@keyframes fadeinout {
+  100% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeinout {
+  100% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 1;
+  }
 }
 
 /*Error message tooltip arrow styling */
@@ -464,13 +501,6 @@ label.personal-category-btn:active {
 #search-filter-section {
   display: flex;
   margin-bottom: 3px;
-}
-
-.delete-all {
-  position: relative;
-  float: right;
-  top: -18px;
-  color: rgba(255, 88, 88, 1);
 }
 
 /* Sort buttons */

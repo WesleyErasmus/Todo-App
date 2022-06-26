@@ -329,11 +329,8 @@ function nameSort() {
 
 function deleteAll() {
 	// const clearAll = document.querySelector(".delete-all")
-
 if (localStorage.length > 0 ) {
-  // removes all data from the tasks key (array)
-  localStorage.removeItem('tasks')
+    localStorage.clear();
 } 
-// Reload page after storage clear
 location.reload();
 }

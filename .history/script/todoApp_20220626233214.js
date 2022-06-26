@@ -4,14 +4,14 @@ window.addEventListener("load", () => {
   // Used || [] to push new tasks to an empty array
 
   // Username input / saves to local storage
-  const nameChange = document.querySelector("#name");
-  const username = localStorage.getItem("username") || "";
-  nameChange.value = username;
+  // const nameChange = document.querySelector("#name");
+  // const username = localStorage.getItem("username") || "";
+  // nameChange.value = username;
 
-  // Change event listener which saves user name
-  nameChange.addEventListener("change", (e) => {
-    localStorage.setItem("username", e.target.value);
-  });
+  // // Change event listener which saves user name
+  // nameChange.addEventListener("change", (e) => {
+  //   localStorage.setItem("username", e.target.value);
+  // });
 
   // Declaring to-do-list form where task gets created from user input
   const tasksForm = document.querySelector("#task-list-form");
@@ -331,8 +331,8 @@ function deleteAll() {
 	// const clearAll = document.querySelector(".delete-all")
 
 if (localStorage.length > 0 ) {
-  // removes all data from the tasks key (array)
-  localStorage.removeItem('tasks')
+  // removes all data from local storage
+  localStorage.clear();
 } 
 // Reload page after storage clear
 location.reload();

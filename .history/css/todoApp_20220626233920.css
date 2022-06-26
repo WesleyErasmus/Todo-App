@@ -462,15 +462,15 @@ label.personal-category-btn:active {
 
 /* CONTAINER FOR SORT BUTTONS */
 #search-filter-section {
+  position: relative;
   display: flex;
   margin-bottom: 3px;
 }
 
 .delete-all {
-  position: relative;
+  position: absolute;
   float: right;
-  top: -18px;
-  color: rgba(255, 88, 88, 1);
+  top: -10px;
 }
 
 /* Sort buttons */

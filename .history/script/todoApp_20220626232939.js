@@ -331,9 +331,15 @@ function deleteAll() {
 	// const clearAll = document.querySelector(".delete-all")
 
 if (localStorage.length > 0 ) {
-  // removes all data from the tasks key (array)
-  localStorage.removeItem('tasks')
+  localStorage.removeItem(tasks);
+  const nameChange = document.querySelector("#name");
+  const username = localStorage.getItem("username") || "";
+  nameChange.value = username;
+
+  // Change event listener which saves user name
+  nameChange.addEventListener("change", (e) => {
+    localStorage.setItem("username", e.target.value);
+  });
 } 
-// Reload page after storage clear
 location.reload();
 }

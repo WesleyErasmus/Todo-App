@@ -467,10 +467,9 @@ label.personal-category-btn:active {
 }
 
 .delete-all {
-  position: relative;
+  position: absolute;
   float: right;
-  top: -18px;
-  color: rgba(255, 88, 88, 1);
+  top: -10px;
 }
 
 /* Sort buttons */
